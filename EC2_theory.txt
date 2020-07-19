@@ -78,6 +78,9 @@ EC2 Purchase Option:
 		a. for particular timestamp or day.
 		b. once allocated bill will be generated.
 	7.Bare Metal
+		a.direct access for hardware and ownership also.
+		b.I3 Metal,R5 Metal,Z1dMetal
+		c.this is applicable for advanced compliance case.
 	
 EC2 Access:
 
@@ -108,9 +111,21 @@ When you Stop an EBS based EC2 Instance:(Intance storage directly attached with 
 	6.Instances Releases Public IPV4 address back to AWS pool.
 	7.Instances Retain Elastic IP(Permanent IP) Address.
 	
+	
 When you terminate Instance:
 	1.EBS root volume will be deleted by default.(can be chnaged Delete On Termination)
 	2.additioncal volume will be remain
+	3.Once instance terminated it will be shown in console upto 1 hr.
+	4.EC2 Tarmination Protection should be enabled for any accidental termination.
+	
+EC2 Metadata:
+	1.Instance related data.
+	
+Instances User Data:
+	1.to put script while booting the inststance.
+	2.16KB max size of the script.
+	3.This data cannot be encrypted.
+	
 	
 	
 	
