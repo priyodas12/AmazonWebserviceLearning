@@ -1,0 +1,40 @@
+Cloud Terms:
+	1.IAAS(Infrastructure as a service)
+	2.PAAS(PLatform as a service)
+	3.SAAS(Software as a service)
+	
+	
+Cloud Model:
+===========
+
+Application---------------------------------------
+^                                                |
+|
+Data                                             |
+^												SAAS
+|                                                |
+Runtime------------------------------------
+^                                         
+|                                         |                                          
+Middleware								 PAAS
+^                                         |
+|                                         
+OS---------------------------------
+^                                 |
+|                                 
+Virtualization                           
+^                                         
+|                                 |                                         
+Server                           IAAS     
+^                                 |
+|                                         
+Storage                                 
+^                                         
+|                                 |       |      |  
+Network------------------------------------------
+
+
+Deployment model:
+1.public cloud : AWS,Azure,GCP
+2.private cloud/enterprise cloud: organiztion specific dedicated cloud.
+3.hybrid cloud: Azure

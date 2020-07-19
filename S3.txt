@@ -1,0 +1,116 @@
+Storage:
+
+1.Simple storage Service(unstructured data,object type)
+2.Elastic File System(Common file system storage-updated,patch file,for linux based)
+3.Elastic Block Storage.(EC2 attach,block level storage)
+4.Glacier(durable,available and low latency data storage for archive)
+5.Snowball(portable storage for data migration)
+
+Block Level Storage->can only be accessed by EC2;
+
+	1.structured data,random read/write data.
+	2.block storage divides the data to be in evenly sized blocks for instance.
+	3.metadata cannot be stored.
+	4.only indexing data store to retrieve.
+	
+Object Level Storage-> can be access by Internet;
+
+	1.whole object will be stored ata place not division.
+	2.metadata,object global unique id
+	3.dropbox,aws s3,
+	
+
+Simple Storage Service:
+	1.Region Specific storage service accesible by HTTP and HTTPS
+	2.Object based storage.(as it is will be stored)
+	3.for OS installation S3 cannot be used.
+	4.Three copis will be maintained for S3 object.
+	5.Data stored in bucket(kind of folder
+	and flat container i.e. under bucket there should not be another bucket).
+	6.Max Bucket capacity 5TB.No limitations upto 100 Buckets/account.
+	7.Can create under another folder in side Bucket by AWS console.
+	
+S3 Bucket Naming Convention:
+	1.globally unique name.
+	2.Bucket name cannot be changed once created.
+	3.3 to 63 character should contain in bucket name.
+	4.Service-end-point,bucketname,object name,version name.
+	5.bucket name are part of URL
+	6.space must be avoided,should use . in between name.
+	7.Bucket name should not be an IP address.
+	8.By default bucket object will be private,only owner can access.
+	
+Lifecycle Management:S3---after 30 days->S3-IA---after 30 days--->Glacier
+	1.maintain cheaper data.
+	
+Satic Website hoisting:
+
+S3 Versioning:
+	1.Accidental data delete or update.
+	2.Data retention and archive.
+	3.versioning can not be deleted once enabled,only suspended.
+	4.Versioning enabled on bucket level.
+	5.delete marker will be attached once object will be enabled.
+	6.incremantal data saving done.
+	7.MFA s3 delete can be enabled.
+	
+S3 Bucket Name convention:
+https://region-name.amazonaws.com/bucketName
+https://s3-eu-west1.amazonaws.com/mybucket
+	
+S3 Multipart Upload:
+
+	1.100MB max,parallel process.
+	2.>5GB file always multi part upload.
+	3.min size minimum of 0 bytes,max 5TB
+	
+Copying S3 Bucket:
+	1.back ups
+	2.Multi part upload API.
+	
+S3 Storage:
+	1.S3 Standard(3 cpy in another AZ)
+		A.High durability,Availability daily accessible data.
+		B.99.9999999999% Durable
+		C.99.99% available
+		D.SSL Data encryption be done in flight or rest both.
+		E.Storage charge high ,access charge low.
+		F.Single max PUT 5GB.
+	2.S3 Glacier Deep Archive:(cheapest)
+		A.to archive with low cost,securly,durable max retrieval time 12 hrs
+		B.Magnetic type of library.
+		C.99.9999999999% Durable
+		D.99.9% available
+		E.75% less cose than Glacier
+		
+	3.S3 Standard IA(3 cpy in another AZ)
+		A.Less Frequent Access ,but Rapid access.
+		B.99.9999999999% Durable
+		C.Storage cost cheaper(half of S3) but Access cost high.
+		D.99.9% available
+		E.SSL Data encryption be done in flight or rest both.
+		F.Data Deleted from S3 1A within 30 days will be charged 30 days full.
+		
+	4.S3 Standard IA One Zone
+		A.Same like S3 Standard IA but data stored in one AZ.
+		B.99.9999999999% Durable
+		C.99.5% available
+		D.AWS will not pay any while any type of destruction.
+	5.S3 Glacier
+		A.to archive with low cost,securly,durable
+		B.99.9999999999% Durable
+		C.three retrival option available from min to hrs.
+		D.SSL Data encryption be done in flight or rest both.
+		E.Multiple copies will be saved in Different AZ.
+		F.10GB/month data can be retrive in free tier.
+	6.S3 Intelligent Tiering(3 cpy in another AZ)-data will be moved in between S3 Std(for frequent) & S3 IA(non frequent)
+		A.designed to optimize cost by automatically moving data to the most cost effective Access-tier.
+		B.It Works by storing objects in two tiers
+		C.If an Object in the infrequest access tier is accessed,that will moved back to frequent access tier.
+		D.There are no retrieval fees when using the S3 Intellegent tiering.
+		E.Object less than 128KB will not be moved to IA.
+		F.99.9999999999% Durable
+		G.99.9% available
+		
+	
+	

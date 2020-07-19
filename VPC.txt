@@ -1,0 +1,90 @@
+VPC(Virtual Private cloud):
+	1.per Region max 5 VPC can be created.(not in Account)
+	2.per VPC max 200Subnet we can create.
+	max 200 subnet can be created.(5*200=1000 per region)
+	3.5 elastic IP we can take per account.
+	4.once VPC created DHCP,NACL and Security group will be created automatically.
+	5.VPC will be created in Region.
+
+Default VPC:
+	1.can be deleted.(if deleted can be restored)
+	2.has default CIDR,Security Grp,NACL,and ROute Table.
+	3.has default Internet Gatway.
+Customed VPC:
+	1.As per requirement.
+	2.CIDR can be decided CIDR.
+	3.IG has to be created.
+	
+This sequence must be followed by:
+
+Create VPC:->Create Subnet->Create IG->Create Route Table
+
+Public Subnet:
+	if a subnet having tarffice direct to IG.
+	Ec2 Instance should have public IP
+	
+Private Subnet:
+	this subnet will not have no route to IG.
+	
+when you create a vPC ypu must specify on IPV4 CIDR block for VPC the allowed block /16 to /28 network.
+
+Inside subnet:these 5 will be blocked.
+ suppose 10.0.0.0/16 for a subnet
+	1.10.0.0.0->network address
+	2.10.0.0.1->reserved by AWS for VPC route
+	3.10.0.0.2->Reserved for DNS server
+	4.10.0.0.3->future use
+	5.10.0.0.255->direct droadcast address
+	
+to check public subnet->check route table->any logged IP with IG.
+
+public and private subnet can talk inside VPC thrugh route table.
+
+Implied Route & Route Table:
+
+	1.200 route table/VPC
+	2.50 entry/route table
+	3.each subnet must be associated only one route table at a time.
+	4.if you not associate with any route table by default it will be associated with default route table.
+	5.main route table cant be deleted,and it can be modified.
+	
+	
+Internet Gateway:
+	1.logical entity(virtual)
+	2.virtual router that connects a VPC with internet.
+	3.default VPC by default attached to Interenet Gateway.
+	4.it supports IPV4 and IPV6
+	
+NAT Gateways:(Network Address Translation):
+	1.to connect private subnet to internet.
+	2.installed in Public Subnet.
+	3.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,128 @@
+RDS:
+
+	1.Field,Touple(row),Attributes(columns)
+	2.Schema->Design of database
+	3.can not scale out Hrizontally.(adding more server)
+	4.Vertical scale out possible but costly opertion.
+	5.all are in SQL.
+
+NOSQL:
+	1.Non structured.
+	2.low maintaninace
+	3.Faster performace in read and write
+	4.Horzontal scaling possible
+	5.Best of OLAP
+	
+Type of NoSQL:
+	1.Columnar Database(HBase,Cassendra)
+	2.DOcument Database(MongoDB,COuchDB)
+	3.Key-Value Database(Redis,DynamoDB)
+	4.GraphBase Database(Neo4J,FloackDB)
+	
+Multiple Availability Zone Criteria:
+	1.You can select Multi AZ option when you lunch RDS.(Multi AZ cannot be decided by user).
+	2.RDS creates Stand by in different AZ and in same region with synchronous update.
+	primary to stand by update will be synchronous.
+	3.You cannot Read/Write data in stand by database.
+	4.You cannot choose any AZ where stand by will be created,once RDS is Up you can only see in which AZ its created.
+	5.after failover stand by will act as primary another standby  will be created,even though last one DB instance up then also it will act as stand-by.
+	6.AWS recomended for provisioned IOPS for multiple AZ.
+	
+FailOver cases:
+	1.primary database fails
+	2.in case of AZ failure.
+	3.Netwrok connectivity issue with primary.
+	4.loss of primary DB EC2 instance fail.
+	5.EBS failure
+	6.Primary database instance chnaged.
+	7.Patching the OS of the DB instance.
+	8.Manual failover.(reboot)
+	
+Multi AZ RDS failover procedure:
+	1.During Failover the CNAME of the RDS DB instances is updated to map with secondary IP address.
+	2.RDS endpoint does not change by Selecting Multi AZ option,However the primary and stand by instances will have different IP address,as they are in different AZ.
+	3.Its not recomended that you do not use IP address for RDS.
+	4.Reboot with Failover option should be seleccted for manual failver.
+	
+Snapshots and Back ups:
+	1.whenever failover occures AWS sends 
+	SNS notification(chargable)
+	2.You can use API call to findout the RDS eevnts occured in last 14 days.
+	3.Even you can use CLI to see last 14 days logs
+	4.In AWS console we can check only for one day.
+	5.In case 
+			OS patching
+			Syatem updates
+			DB Scaling
+			these things happens on stand by then on primary.
+			
+	6.In Multi AZ snapshots and automated back ups are done on Stand by instance to avoid IO susspension.(5 mins delay)
+	
+RDS multi AZ Deployment:
+	1.do first on stand by.
+	2.convert stand by to primary.
+	3.You can manually upgrade to DB instance
+	RDS->DB instance->modify DB->Set DB Engine version on maintainance window.
+	
+RDS Backups:
+	1.AWS RDS automated back ups
+	2.User insitiated Manual back ups.
+	3.either you can take ups for EC2 and DB instances or both.
+	4.Back ups will be stored in different AZ.
+	5.Stored in Amazon S3.
+	6.For no multi AZ enabled primary will be freeze while taking back ups.
+	7.Back ups should be ACTIVE while taking automatic back ups.
+	8.Automated back ups will not be charged but S3 storage charge will be taken.
+	9.Automated back up will be deleted once RDS will be deleted.
+	10.disable automatic back up->retention period to 0 days.
+	11.default retention period:7 days
+	
+R
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

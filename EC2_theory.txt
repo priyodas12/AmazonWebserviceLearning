@@ -1,0 +1,173 @@
+General Purpose Instances:
+	1.balanced of computing,Memory and Networking resource.
+	2.for varity of workload
+	
+	A Series:
+		A1(medium,large)-Scale out workload.
+		webserver
+		container for microservice.
+		caching fleet.
+	M Series:
+		M4,M5,M5a,M5ad(large).
+		M4- intel xenon,nytro EBS only storage
+		M5- max ram,gaming server,small and medium db.
+		EBS and NVMe SSD.
+	T Series:
+		T2 Micro,T3,T3a(small,Nano)
+		web app,web server
+		5 to 40% cpu usage
+		testing code 
+		web server.
+		
+Ccompute Optimized:
+	1.Compute bound/intensive Application.
+	2.cost effective for compute.
+		C-Series:
+		C4,C5,C5n
+		Virtual CPU:2 to 36
+		RAM:3.75 to 60GB
+		EBS only
+		Webserver,Batch processing,Video gaming.
+Memory Optimized Instance:
+	    R,X,Z Series
+		
+		R4,R5,R5ad,R5d:(RAM Focused)
+			Relational,NonRelational DB.
+			InMemory caching.
+			VCPU:2 to 96
+			RAM:16-760GB
+			EBS only
+		X1,X1e:(max Memory)
+			VPCU:4 to 128
+			RAM:122 to 3904GB
+			Instance Storage:SSD
+			SAP HANA
+		Z1d:(Hibrid of R and X type)
+			40 GHz Fequency
+			AWS Nytro system.
+			Xeon Processor
+			1.8TB Instance Storage.
+			VCPU:2 to 48GB
+			RAM:16 to 284GB
+			Stogare:NVM SSD.
+			
+
+EC2 Access:
+
+	1.To Accesss Instancs,we need a key and key pair name.
+	2.You can download the private key only once.
+	3.the public key is saved by AWS.to match it to the key pair name and private key when you try to login to the EC2 Instanca.
+	4.Without key pair you cannot access instances via RDP or SSH.
+	5.There is 20 EC2 instances soft limit of account,you can request AMAZON for extension.
+	
+EC2 Status Check:
+	1. 1 minute automatic Status check.
+	2.Inbuilt facility.
+	3.By cloudwatch default time 5min,less than this can be charged.
+	4.Stop instance can not be chargable but assocaited EBS will be chargable.
+	
+When you Stop an EBS based EC2 Instance:
+	(Root volume will be on EBS)
+	1.Instances perform Shut down.
+	2.State Running->Stop
+	3.EBS volume remains attached to instances.
+	4.Any data cached in RAM on instance store will be gone.
+	5.private IP4 and IP6 will be remain same.
+	6.Instances Releases Public IPV4 address back to AWS pool.
+	7.Instances Retain ELastic IP Address.
+	
+When you terminate Instance:
+	1.EBS root volume will be deleted by default.(can be chnaged Delete On Termination)
+	2.additioncal volume will be remain
+	3.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+
+		

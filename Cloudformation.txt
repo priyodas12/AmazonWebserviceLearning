@@ -1,0 +1,19 @@
+CloudFormation:(Automation)
+	IAAS service which simply gives the facility to create and amanage a collection of aws resources by provisoning and updating them in an orderly and predictable, declarative way.
+	
+	1.Infrasture as Code.
+	2.Low cost management.
+	3.Prductivity
+	4.seperation of concern.
+	
+How AWS works:
+	1.template have to be uploaded in s3 and then referenced in CloudFormation.
+	2.To Update a template we cat edit previous ones,we have to re upload a new version of template to AWS.
+	3.Stack are identified by a name.
+	4.Deleting a stack deleted every single artifacts that was created by cloudfromation.
+	
+Depolying ColudFromation Templates:
+	1.Manual Way
+	2.Automated way- editing templates in a YAML file.
+	
+	

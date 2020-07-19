@@ -1,0 +1,77 @@
+Types of Block Storage:
+
+1.EBS(Elastic block Storage)-Data will not be deleted while stop or reboot.but once Terminated data will be deleted.
+
+	A.Persistant
+	B.Network Attached Virtual drive.
+	C.RAW & Unformatted data Block storage.
+	D.one EBS volume only can be connected to one Ec2 in one availbility ZOne.
+	E.Both EBS and EC2 must be in same Availability Zone even both Availbility Zone in same Region.
+	F.EBS data can be replicated by AWS in same Regoin and same Availbility Zone.
+	
+	
+2.Instance Store.-Data will not be deleted while reboot. but once stopped or terminated data will be removed.
+
+(Hardware(Hypervision(Virtual Machine)))
+
+	A.Virtual Hard Drive on that host instance alloacted by EC2.
+	B.Limited to 10GB per Drive.
+	
+	
+Root/Boot Volume->Where OS installed.
+
+Example:EBS backed EC2 or Instance Store.
+
+EBS Volume Types:
+
+Bootable-OS to be installed.
+IOPS-INput and OUTput per second(Read and Write operation)
+
+A.SSD(Solid State Drive)-Bootable,Throughput measured by IOPS/GB
+	1.General Purpose SSD(gp2)- 
+		a.Default 30GB
+		b.3IOPS/GB- for 50GB 150IOPS/GB
+		c.low latancy
+		d.1GB to 16TB size
+		e.Price depends on region.
+		
+	2.Provisioned IOPS(io1)-Max IPOS(64000IOPS for Nytro system)
+		a.32000IOPS default
+		b.4GB to 16TB
+		c.for applicable for mission critical application(milisecond sensitive data-rocket lunching apps)
+B.HDD(Hard Disk Drive)-Non Bootable,throughput measued by MB/sec
+	1.Throughput Optimised HDD.
+		a.500GB to 16TB
+		b.500IOPS
+		c.Big data and Warehouse
+	2.Cold HDD.
+		a.Lowest cost
+		b.best for file servers
+		c.250IOPS
+		d.500GB to 16TB
+C.Magnetic Standard-Bootable.
+	1.Cheapest ever
+	2.volumes applicable for infrequesntly accessed machine
+	3.1GB to 1TB
+	4.40 to 200 IOPS
+	
+SnapShots:
+	1.Point in time image copy.
+	2.stored in S3.
+	3.1st time snapshot taking more time,incremtal snapshot taking less time.
+	4.per account 5000EBS can be created.
+	5.per account 10000Snapshot can be taken.
+	i.e. per EBS to for max to max condition.
+	6.EBS are Availbility Zone Specific.
+	7.Snapshots are Region Specific.
+	8.Any AZ in region can use snapshots to create EBS volume.
+	9.to Migrate an EBS from one AZ to another,create a snapshot(region Specific) and Create an EBS volume from the snapshot in the specific AZ.
+	10.you can create a snapshot to a EBS volume same on larger size than the original volume size from which the snapshot was initially created.
+	11.yu can take snapshot of non-boot/not-root volume while the volume is in Running,it means we can still access while taking snapshot.
+	12.SnapShots are created immediately but it may stay in Pending staus,untill full snapshot completed,may take few hours for first-time.
+	13.only Non-boot volume can be acessed while taking snapshots.
+	14.To take complete snapshot you have to stop root volume.(applicable for EBS)
+	15.Root volume snapshot only be taken in stop stage.(for instance store you have to pause).
+	
+Incremental SnapShots:
+
