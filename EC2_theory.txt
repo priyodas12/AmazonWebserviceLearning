@@ -104,9 +104,9 @@ When you Stop an EBS based EC2 Instance:(Intance storage directly attached with 
 	2.State Running->Stop
 	3.EBS volume remains attached to instances.
 	4.Any data cached in RAM on instance store will be gone.
-	5.private IP4 and IP6 will be remain same.
+	5.only private IP4 and IP6 will be remain same.
 	6.Instances Releases Public IPV4 address back to AWS pool.
-	7.Instances Retain ELastic IP Address.
+	7.Instances Retain Elastic IP(Permanent IP) Address.
 	
 When you terminate Instance:
 	1.EBS root volume will be deleted by default.(can be chnaged Delete On Termination)
