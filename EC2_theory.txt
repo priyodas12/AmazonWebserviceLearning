@@ -63,10 +63,14 @@ EC2 Purchase Option:
 		a.set of virtuaized  dedicated ec2(not for other type) to a particular user.
 	3.Dedicated Host
 		a.dedicated physical server for software compliance.
-		b.
+		b.cannot be migrated.
 	4.Spot
 		a.cheapest
+		b.bid done from aws for idle instances any type
+		c.testing only
+		d.2 mins of warning time for data saving before being stopped.
 	5.Reserved
+		a.
 	6.Schedule
 	7.Bare Metal
 EC2 Access:
