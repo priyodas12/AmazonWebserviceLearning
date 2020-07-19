@@ -70,8 +70,14 @@ EC2 Purchase Option:
 		c.testing only
 		d.2 mins of warning time for data saving before being stopped.
 	5.Reserved
-		a.
+		a.for whole year reserved.(1-3 year,advanced payment required).
+		b.75% chepaer according to on demand instances.
+		c.database instances.
+		d.Scheduled RI,Standard RI,Convertible RI(upto 54% cheaper).
+		e.
 	6.Schedule
+		a. for particular timestamp or day.
+		b. once allocated bill will be generated.
 	7.Bare Metal
 EC2 Access:
 
