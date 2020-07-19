@@ -98,7 +98,7 @@ EC2 Status Check:
 
 	Step 2 : Instance check, this check is done to check software(os) level configuration of the instance. This can be looked into by you. If this check fails then you will need to check either user data/ launch configuration or AMI/OS configuration.
 	
-When you Stop an EBS based EC2 Instance:
+When you Stop an EBS based EC2 Instance:(Intance storage directly attached with Server inside)
 	(Root volume will be on EBS)
 	1.Instances perform Shut down.
 	2.State Running->Stop
@@ -111,7 +111,7 @@ When you Stop an EBS based EC2 Instance:
 When you terminate Instance:
 	1.EBS root volume will be deleted by default.(can be chnaged Delete On Termination)
 	2.additioncal volume will be remain
-	3.
+	
 	
 	
 	
