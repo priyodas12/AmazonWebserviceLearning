@@ -74,11 +74,11 @@ EC2 Purchase Option:
 		b.75% chepaer according to on demand instances.
 		c.database instances.
 		d.Scheduled RI,Standard RI,Convertible RI(upto 54% cheaper).
-		e.
 	6.Schedule
 		a. for particular timestamp or day.
 		b. once allocated bill will be generated.
 	7.Bare Metal
+	
 EC2 Access:
 
 	1.To Accesss Instancs,we need a key and key pair name.
@@ -89,9 +89,9 @@ EC2 Access:
 	
 EC2 Status Check:
 	1. 1 minute automatic Status check.
-	2.Inbuilt facility.
-	3.By cloudwatch default time 5min,less than this can be charged.
-	4.Stop instance can not be chargable but assocaited EBS will be chargable.
+	2. Inbuilt facility.
+	3. By cloudwatch default time 5min,less than this can be charged.
+	4. Stop instance can not be chargable but assocaited EBS will be chargable.
 	
 When you Stop an EBS based EC2 Instance:
 	(Root volume will be on EBS)
