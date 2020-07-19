@@ -52,6 +52,23 @@ Memory Optimized Instance:
 			Stogare:NVM SSD.
 			
 
+EC2 Purchase Option:
+	1.On demand:(when you dont know the timing of running)
+		a.AWS & AWS RDS
+		b.Short term workload recomended.
+		c.Testing and Dev work.
+		d.pay only used timing(hourly costed for windows and other,per second costed for linux and ubuntu)
+		e.terminated and stop timing can not be billed for instance but for stop EBS storage will be billed.
+	2.Dedicated Instance
+		a.set of virtuaized  dedicated ec2(not for other type) to a particular user.
+	3.Dedicated Host
+		a.dedicated physical server for software compliance.
+		b.
+	4.Spot
+		a.cheapest
+	5.Reserved
+	6.Schedule
+	7.Bare Metal
 EC2 Access:
 
 	1.To Accesss Instancs,we need a key and key pair name.
