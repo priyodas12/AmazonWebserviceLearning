@@ -92,6 +92,11 @@ EC2 Status Check:
 	2. Inbuilt facility.
 	3. By cloudwatch default time 5min,less than this can be charged.
 	4. Stop instance can not be chargable but assocaited EBS will be chargable.
+	5.When an EC2 instance is launched, AWS checks whether that ec2 is able to connect to the network or not. It does so in two steps.
+
+	Step 1: System check, this checks for proper hardware configuration of the instance at host level. It should be noted that you can not check these. These are aws managed. The best you can do is just stop and start the Instance in case system checks fail. It simply deallocates the previous VM and a new VM on different hardware is provisioned. If you want to retain public IP and other related stuff, you can configure Auto Recovery of instance from cloudwatch console.
+
+	Step 2 : Instance check, this check is done to check software(os) level configuration of the instance. This can be looked into by you. If this check fails then you will need to check either user data/ launch configuration or AMI/OS configuration.
 	
 When you Stop an EBS based EC2 Instance:
 	(Root volume will be on EBS)
