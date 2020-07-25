@@ -33,3 +33,10 @@ Beanstalk Support Language:
 	10.Single COntainer Docker
 	11.Multicontainer Docker
 	12.Preconfigured DOcker.
+	
+	
+	
+Before Starting with Beanstalk:
+	1.terminate running EC2,ALB,ASG.
+	
+1 Application-->Multiple Environment
