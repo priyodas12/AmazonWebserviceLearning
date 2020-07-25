@@ -21,4 +21,15 @@ Components:
 	3.Environment Name:dev,test,prod
 	
 Beanstalk Support Language:
-	1.
+	1.Go
+	2.Java SE
+	3.Java with tomcat
+	4.DOT NET with Windows IIS
+	5.Node Js
+	6.PHP
+	7.Python
+	8.Ruby
+	9.Packer Builder
+	10.Single COntainer Docker
+	11.Multicontainer Docker
+	12.Preconfigured DOcker.
