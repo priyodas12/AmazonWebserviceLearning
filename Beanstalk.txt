@@ -1,0 +1,24 @@
+Beanstalk:
+
+AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
+
+
+	Managed Service
+		1.Instance config/OS handled by AWS
+		2.Deployment Strategy is configurable 
+		by performed by beanstalk.
+		
+		3.Just the application code the responsibility.
+	
+	Three Architechture Model
+		1.Single Instance depolyment:goog for dev.
+		2.Lb+ASG:Great for Production/Pre Production.
+		3.ASG only:
+		
+Components:
+	1.Application:your code
+	2.Application Version:each Deployment gets assigned a version
+	3.Environment Name:dev,test,prod
+	
+Beanstalk Support Language:
+	1.
