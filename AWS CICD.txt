@@ -1,0 +1,190 @@
+AWS CICD:
+	1.Aws Codecommit: Storing our code.
+	pipeline form Code to ELasticbeanstalk.
+	2.AWS Codebuild: build and testing our code.
+	3.Aws Codedeploy:deploy our code.
+	4.AWS Codepipeline: Automating out 
+
+COntinuous Integration:
+	1.Developers push the cods to a code repository often(Github/Codecommit/Bitbucket)
+	
+	2.A testing/build server checks the code as soon as its pushed(Codebuild/Jenkins CI)
+	
+	3.The developer gets feedback about the tests and cheecks that have passed/failed
+	
+	4.Find bugs/fix bugs
+	
+	5.Deliver faster code is tested,deploy ofter.
+	
+Continuous Delivery:
+	1.Ensure that the software can be released reliaby whenever needed.
+	
+	2.Ensures deployments happen ofter and quick.
+	
+	3.Shift away from "one release every 3 months" to "5 releases a day"
+	
+	4.for this we uses
+		A.Codedeploy
+		B.Jenkins CD
+		C.Spinnaker
+	
+	
+	
+	Developer--push->code repository--code test and build-->Buildserver--deploy every passed build->Deployment
+	Server.
+	
+	
+	
+	
+Technology Stack for CICD:
+
+	1.AWS Codecommit-->Code.
+	2.AWS code build-->build test.
+	3.Aws Beanstalk-->Deploy and provision.
+	
+	4.AWS Codepipeline-->Orchestrate 1,2,3 step.
+	
+AWS CodeCommit:
+	1.Version Control
+	2.local and central online repo.
+	3.private repo
+	4.no size limit
+	5.fully managed.
+	6.code only in AWS cloud account
+	7.Secure
+	8.Integrated with Jenkins
+	
+Code commit Security:
+	1.interaction will be done with git command
+	2.both SSH and HTTPS can be used for authentication.
+	3.MFA can be used in authentication.
+	4.IAM policies for Authorization.
+	5.Encryption is done by KMS.
+	6.Cross account Access:
+		1.Use IAM roles for others to use.
+		3.AWS STS.
+	7.Code COmmit can be Integrated with SNS.
+	
+Code Pipeline:
+	1.Continuous delivery
+	2.Visual workflow
+	3.source:Github/Codecommit/AWS S3
+	4.Build:Codebuild/Jenkins/etc
+	5.LoadTesting:3rd Party Tool
+	6.Deploy: AWS Codedeploy/Beanstalk/CloudFormation/ECS
+	7.Made of stages:
+	
+Artifacts:
+	1.each stage can create artifacts
+	2.artifacts are passed stored in Amazon s3 and passed on to next stages.
+	3.each stage changes can be associated with SNS notification.
+	4.CloudTrail can be sued to audit over AWS api calls
+	
+AWS CodeBuild:
+	1.Fully managed build service.
+	2.alternative to jenkins 
+	3.continuous scaling.
+	4.pay for usage:for time of build
+	5.leverages of Dockers.
+	6.secureed with KMS
+	
+Overview:
+	1.take source code from repo
+	2.build instructions can be defined in code(buildspec.yml)
+	3.output logs to Amazon S3 & AWS cloudwatch.
+	4.Metrics to moinitor codebuild statictics.
+	5.SNS notification
+	6.Build can be done in codepipeline & itself.
+	7.java,ruby,python,go,android,.net,php,node.js,Docker can extend any envirnment.
+	
+	SourceCode(codecommit)<buildspec.yml>-->
+	Build DOcker Image(AWS managed or Custom)-->CodeBuild Container(running on Build Docker Image,runs instruction from buildspec.yml)-->AWS S3 Cache Bucket-->AWS S3 Bucket Artifacts-->saves logs in AWS CLoudWatch.
+	
+BuildSpec.yml:
+	1.must be in root of your code.
+	2.define environment variable
+	3.pahses:
+		A.Install: dependencies.
+		B.Prebuild: insturction
+		C.Build:
+		D.PostBuild:
+	4.Artifcats will be uploaded in S3.
+	
+	
+AWS CodeDeploy:
+	1.deploy application many EC2 instances.
+	2.these instances not be managed by beanstalk.
+	3.there are severa ways to handle deployments using opesource tool.(Ansible,Teraform,CHef)
+	4.We can use the managed service AWS CodeDEploy on top of.
+	
+	
+AWS Codedeploy-steps:
+	1.Ecah EC2 machine must be running the code deploy agent.
+	2.the agent is continuously pooling AWS CodeDeploy for work to do.
+	3.CodeDeploy Sends appspec.yml file
+	4.Application is pulled from Github.
+	5.EC2 will run the deployment instructions
+	6.codedeploy agent will report of successfailure of deployment on instances.
+	7.appspec.yml should be in root folder.
+	
+Primary Components:
+	1.Application name:unique name
+	2.Compute Platform:EC2
+	3.Deployment Configuration:
+		rules for success failure.
+	4.Deployment Group:
+	5.Deployment Type:
+	6.IAM Instance profile:
+	7.Application Revision:application code+appspec.yml
+	8.Service role:
+	
+AppSpec.yml:
+	1.File section:how to source from S3.
+	2.Hooks: set of instruction to deploy new version
+		A.ApplicationStop
+		B.DOwnloadBundle
+		C.BeforeInstall
+		D.AfterInstall
+		C.ApplicationStart
+		E.ValidaeService:(important)
+	
+	
+AWS CodeStar:
+	1.integrated service solution that regroups:github,codecommit,codebuild,codedeploy,clodformation,codepipeline,cloudwatch
+	2.helps quickly create CICD ready projects for EC2,ambda,Beanstalk.
+	3.Integarted tracking issue:with JIRA/Github.
+	4.Integrated with Cloud9 for web IDE.
+	5.One dashboard ro view all services.
+	6.Limited customization.
+	
+
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
