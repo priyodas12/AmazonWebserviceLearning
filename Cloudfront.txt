@@ -1,0 +1,6 @@
+CloudFront:
+	1.Content delivery network(CDN)
+	2.improves read performance.content in cached at edge.
+	3.216 point of presenc in globally.
+	4.DDos protection enabled.
+	

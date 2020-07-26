@@ -1,0 +1,4 @@
+Athena:
+	1.serverless service to perform analytices directly against s3 files.
+	2.uses SQL languages to query the files.
+	3.has a JDBC/ODBC driver.
