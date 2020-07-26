@@ -1,0 +1,25 @@
+AWS X-RAY:
+	1.Troubleshooting application performance.
+	2.Distributed tracing of microservices
+	3.debugging in production.
+	4.visual analysis of our application.
+	5.review request behaviour.
+	
+Compatability:
+	1.Lambda
+	2.ELastic Beanstalk
+	3.ECS
+	4.ELB
+	5.API GATEWAY
+	6.EC2 Instances or any application server.
+	
+X-Ray Levearges Tracing:
+	1.each components
+	2.% of request.
+	3.IAM and KMS 
+
+How to enable X-Ray:
+	1.your code must import the AWS X-Ray SDK.
+	2.Install the X-Ray deamon or enable X-ray AWS integration.
+	3.X-ray deamon will send batch request in every 1 second to x-ray to analyse.
+

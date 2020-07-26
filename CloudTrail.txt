@@ -1,0 +1,7 @@
+Cloudtrail:
+
+	1.provides govornance,compliance and udit for your aws account.
+	2.enable by default.
+	3.get an hstory/api call made within yout aws account by-console,SDK,CLI
+	4.can put logs from cloudtrail into cloudwatch logs.
+	5.If any resource is deleted in AWS look into cloudwatch.
