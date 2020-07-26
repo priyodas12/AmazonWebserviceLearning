@@ -87,6 +87,20 @@ RCU:
 		
 		6KB should be rounded upto nearest whole capacity 8KB.
 		
+DynamoDB APIs:
+
+	1.PutItem: write date to DynamoDB.(Full replace)
+	
+	2.UpdateItem:Update data in Dyamo DB(partial update)
+	
+	3.COnditional Writes:
+	Accept a write/update only if conditions are respected.
+	
+	4.DeleteItem: delete Individual row.
+	
+	5.DeleteTable: Delete whole table;
+	
+		
 		
 		
 		
