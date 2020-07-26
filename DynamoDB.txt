@@ -101,6 +101,12 @@ DynamoDB APIs:
 	5.DeleteTable: Delete whole table;
 	
 	6.BatchWriteItem: upto 25 PutItem/DeleteItem in a batch.
+	
+	7.GetItem: read data by partition key.
+	
+	8.BatchGetItem: 100 gwtItem upto 16 MB.
+	
+	9.Query: returns iteams beased on expression.
 		
 		
 		
