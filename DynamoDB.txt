@@ -1,0 +1,87 @@
+
+	
+	
+NOSQL Databases:
+	1.non-relational databases and distributed.
+	2.does not support join.(join should be done client side)
+	3.does not perform aggregation.
+	4.scales horizontally.
+	
+DynamoDB:
+	1.fully managed,highly available,3 AZ replication.
+	2.scales massive workloads,distributed database.
+	3.Millions of requests per seconds,100s TB of storage.
+	4.Fast and consistant performance.
+	5.Integrated with IAM for security,authorization and admin activity.
+	
+Basic of DynamoDB:
+	1.made of tables
+	2.each table has primary key.
+	3.can infinte number or items/rows.
+	4.each item has attributes can be added over time-can be null.
+	5.Maximum size of an item is 400KB.
+	6.Data type supported:
+		1.scaler type:Number,Binary,String
+		2.Document type: List,Map
+		3.Set types: String set,Binary Set.
+		
+Primary keys:
+	1A.partition key(Hash):
+	2A.parimary key-->attributes.
+	
+	1B.partition key+sort key
+	2B.user_id+game_id-->attributes
+	
+	
+WCU and RCU:
+	1.Read capacity Unit(throughput for read)
+	2.Write capaccity Unit(throughput for writes)
+	3.Option to set up auto-scaling of throughput to meet demand.
+	4.Throughput can be exceeded temporariy using brust credit.
+	5.if brust credit are empty ,will throw 
+	ProvisonedThroughputException.
+	
+WCU:(per second always)
+	one write capacity unit represents one write per second for an iteam up to 1KB.
+	
+	example:
+	we write 10objects per seconds of 2KB each.
+	
+	we need 10*2=20WCU;
+	
+	we write 6 objects per second 4.5 KB each.
+	
+	we need 6*5=30 WCU;
+	
+RCU:
+	Eventual Consistent Read: 
+		if we read just after a write its possible we will get unexpected response beacuse of replication.
+	Strongly Consistant Read:
+		if we read just after a write and get the correct data.
+	
+	By Deafult Dynamo DB uses eventually consistant read.
+	
+	1 RCU=1 Strongly Consistant Read/Sec 
+			or
+		  2 Evenetually Consistant Read/Sec
+		   
+		  upto 4 KB
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
