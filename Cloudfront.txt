@@ -4,3 +4,10 @@ CloudFront:
 	3.216 point of presenc in globally.
 	4.DDos protection enabled.
 	
+Usecase:
+	1.S3 bucket.
+	2.Ec2 inatance
+	3.s3 website
+	4.any HTTP bucket.
+	
+	
