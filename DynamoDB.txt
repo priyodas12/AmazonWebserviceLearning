@@ -45,13 +45,15 @@ WCU:(per second always)
 	one write capacity unit represents one write per second for an iteam up to 1KB.
 	
 	example:
-	we write 10objects per seconds of 2KB each.
-	
-	we need 10*2=20WCU;
-	
-	we write 6 objects per second 4.5 KB each.
-	
-	we need 6*5=30 WCU;
+		A.
+		we write 10objects per seconds of 2KB each.
+		
+		we need 10*2=20WCU;
+		
+		B.
+		we write 6 objects per second 4.5 KB each.
+		
+		we need 6*5=30 WCU;
 	
 RCU:
 	Eventual Consistent Read: 
@@ -66,6 +68,17 @@ RCU:
 		  2 Evenetually Consistant Read/Sec
 		   
 		  upto 4 KB
+		  
+	example:
+		A.
+		10 stringly consistant reads per seconds of 4KB each;
+		
+		we need 10*4/4=10RCU
+		
+		B.
+		16 eventually consistant reads per seconds of 12 KB each;
+		
+		we need 16/2*12/4=24RCU
 		
 		
 		
