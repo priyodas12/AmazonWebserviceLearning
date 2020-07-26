@@ -1,1 +1,28 @@
-CloudWatch:
+CloudWatch:(Monitoring Tool)
+	1.Application Latency
+	2.Application Outrages
+	3.troubleshooting and monitoring.
+	
+	
+Monitoring Aspects:
+	1.Metrics:collect and tarch key matrices
+	2.Logs: collect ,monitor,analyze and store log files
+	3.Events: Send notification when certain events happen in your aws.
+	4.Alarms: React in real to metric/events.
+	
+AWS X-RAY:
+	1.Troubleshooting application performance.
+	2.Distributed tracing of microservices
+	
+AWS Cloudtrail:
+	1.Internal monitoring of API calls being made.
+	2.Audit changes to AWS Resources bu users.
+
+Cloudwatch Metrics:
+	1.Metric is vriable to monitor.
+	2.metrics belong to namespaces.
+	3.Dimension is an attribute of a metric/events.
+	4.metrics have timestamp.
+	5.can create a dashboard of materics.
+	
+	
