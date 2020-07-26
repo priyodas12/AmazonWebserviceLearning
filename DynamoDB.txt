@@ -1,6 +1,3 @@
-
-	
-	
 NOSQL Databases:
 	1.non-relational databases and distributed.
 	2.does not support join.(join should be done client side)
@@ -107,6 +104,9 @@ DynamoDB APIs:
 	8.BatchGetItem: 100 gwtItem upto 16 MB.
 	
 	9.Query: returns iteams beased on expression.
+	
+	10.Scan: inefficient api will scan whole table,time consuming.
+	
 		
 		
 		
