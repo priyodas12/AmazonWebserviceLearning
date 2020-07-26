@@ -80,6 +80,13 @@ RCU:
 		
 		we need 16/2*12/4=24RCU
 		
+		C.
+		10 strongly consistant reads per sec of each 6KB
+		 
+		we need 10*8/4=20 RCU
+		
+		6KB should be rounded upto nearest whole capacity 8KB.
+		
 		
 		
 		
