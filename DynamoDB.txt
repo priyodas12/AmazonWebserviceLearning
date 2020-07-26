@@ -100,6 +100,7 @@ DynamoDB APIs:
 	
 	5.DeleteTable: Delete whole table;
 	
+	6.BatchWriteItem: upto 25 PutItem/DeleteItem in a batch.
 		
 		
 		
