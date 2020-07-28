@@ -56,34 +56,66 @@ Internet Gateway:
 	4.it supports IPV4 and IPV6
 	
 NAT Gateways:(Network Address Translation):(PAT: port address translation)
+
 	1.NAT gateways to eneble instances in a private subnet to connect to the internet or other AWS services,but prevent the iternet from initiating a conenction with these instance.
+	
 	2.you are chared for creating andusing a NAT gateway in your account.
+	
 	3.to create NAT gateway ,must specify the public subnet in which NAT gateway should reside.
+	
 	4.you must also specify an elestic IP address to associate with NAT gateway when you create it.
+	
 	5.No nned to assign public IP address to your private instance.
-	6.public subnet->web server, internet facinf application instance.
+	
+	6.public subnet->web server, internet facing application instance.
+	
 	7.private subnet->database server.
+	
 	8.After you have created a NAT G you must update the route table associated with one ormore of your private subnets to point internet bound traffic to the NAT G.
+	
 	9.Deleting a NAT G,disassociates its elastic IP address but does not release the address frm your account.
 	
 Security Group:subnet leve security
 	1.it is a virtual firewall works at ENI level(top of hypervision).
+	
 	2. upto 5 security groups per EC2 instance interface can be applied.
+	
 	3.security group can be shared through  ec2 instances.
+	
 	4.It can only allow rules
+	
 	5.stateful,means both inbound and outbound.
 	
 NACL(Network Access Control List):on AZ level
 	1.Its is a function performed on the implied router.
+	
 	2.NACL is an optional layer of security for your VPC that acts as a firewall for controllingtraffic out of one ore more subnets
+	
 	3.your vpc actually comes with a modifiable default network ACL by default,it allows all inbound and outbound IPV4 traffic and if applicable,IV6 also.
+	
 	4.you can create a customer network ACL and associate it with a subnet by default,each custm netwrok ACL denies all inbound and outboundtraffic untill you add rules.
+	
 	5.each subnet in yout vpc must be associated with a NACL,if its not explicitly done,then it will be associated with default one.
+	
 	6.one NCAL can be attached with multiple subnets,but each subnet must be associted with only one NACL.
+	
 	7.a NCAL contains a numbered list of rules that can be evaluated by order.
 	setting with lowest to higher and priority will be follows.
+	
 	8.max number of rules 32766.rule number must be multiple of 100.
-	9.
+	
+	9.NACL is Stateless,both inbound and outbound rules will be considered seperately as permit an ddeny rule.
+	
+VPC Peering: 
+	Communication betweentwo  			seperate private VPC
+	
+	1.VPC peering connection is networking connecction between two vpc that enables you to route traffic between them using private IPV4 addresses or IPV6 addresses.
+	
+	2.intances in either VPC can communicate with each other as if they are within the same network.
+	
+	3.you can create a VPC peering connection between your own VPC or with a VPC in another AWS account,the VPC can be in different region.
+	
+	4. VPC A peers VPC B and VPC B peers VPC A,then communication between VPC A and C not possible,Transitive Peering.
 	
 	
 	
