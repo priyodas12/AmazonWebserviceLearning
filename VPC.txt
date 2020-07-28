@@ -55,10 +55,14 @@ Internet Gateway:
 	3.default VPC by default attached to Interenet Gateway.
 	4.it supports IPV4 and IPV6
 	
-NAT Gateways:(Network Address Translation):
-	1.to connect private subnet to internet.
-	2.installed in Public Subnet.
-	3.
+NAT Gateways:(Network Address Translation):(PAT: port address translation)
+	1.NAT gateways to eneble instances in a private subnet to connect to the internet or other AWS services,but prevent the iternet from initiating a conenction with these instance.
+	2.you are chared for creating andusing a NAT gateway in your account.
+	3.to create NAT gateway ,must specify the public subnet in which NAT gateway should reside.
+	4.you must also specify an elestic IP address to associate with NAT gateway when you create it.
+	5.No nned to assign public IP address to your private instance.
+	6.public subnet->web server, internet facinf application instance.
+	7.private subnet->database server.
 	
 	
 	
