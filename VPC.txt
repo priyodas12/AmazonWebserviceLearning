@@ -63,6 +63,11 @@ NAT Gateways:(Network Address Translation):(PAT: port address translation)
 	5.No nned to assign public IP address to your private instance.
 	6.public subnet->web server, internet facinf application instance.
 	7.private subnet->database server.
+	8.After you have created a NAT G you must update the route table associated with one ormore of your private subnets to point internet bound traffic to the NAT G.
+	9.Deleting a NAT G,disassociates its elastic IP address but does not release the address frm your account.
+	
+Security Group:
+	
 	
 	
 	
