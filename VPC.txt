@@ -69,7 +69,21 @@ NAT Gateways:(Network Address Translation):(PAT: port address translation)
 Security Group:subnet leve security
 	1.it is a virtual firewall works at ENI level(top of hypervision).
 	2. upto 5 security groups per EC2 instance interface can be applied.
-	3.
+	3.security group can be shared through  ec2 instances.
+	4.It can only allow rules
+	5.stateful,means both inbound and outbound.
+	
+NACL(Network Access Control List):on AZ level
+	1.Its is a function performed on the implied router.
+	2.NACL is an optional layer of security for your VPC that acts as a firewall for controllingtraffic out of one ore more subnets
+	3.your vpc actually comes with a modifiable default network ACL by default,it allows all inbound and outbound IPV4 traffic and if applicable,IV6 also.
+	4.you can create a customer network ACL and associate it with a subnet by default,each custm netwrok ACL denies all inbound and outboundtraffic untill you add rules.
+	5.each subnet in yout vpc must be associated with a NACL,if its not explicitly done,then it will be associated with default one.
+	6.one NCAL can be attached with multiple subnets,but each subnet must be associted with only one NACL.
+	7.a NCAL contains a numbered list of rules that can be evaluated by order.
+	setting with lowest to higher and priority will be follows.
+	8.max number of rules 32766.rule number must be multiple of 100.
+	9.
 	
 	
 	
