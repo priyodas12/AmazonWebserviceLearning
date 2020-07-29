@@ -16,3 +16,34 @@ IAM:
 	IAM user can be member of 10 groups(max)
 	
 	We can assign two access key(max) to an IAM User.
+	
+	
+1.Shared access to AWS Accout:
+
+	you can grant other people permissio to admin and use resources in yout AWS account without having to share your access credentials.
+
+2.Granular Permission:
+	
+	you can grant different level of permission to different people for different resources.
+	
+	for instance you can complete access to EC2,S3,DynamoDB while for others you can allow read only access to just some S3 bucket.
+	
+3.Secure Access for application:
+	
+	you can use IAM featuresto securely give access for running application.
+	
+4.Multifactor Authentication:
+	
+	you can add two factor authentication to your account ad to individual database.(google authenticator)
+	
+5.Identity Federation:
+	
+	you can allow user who already has access elsewhere.
+	
+6.Identity information for Assurance:
+
+	using cloudtrail you canmonitor logs.
+	
+7.
+	
+	
