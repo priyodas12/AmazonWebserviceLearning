@@ -48,6 +48,8 @@ IAM:
 	
 	payment gateway complient for payment card for security.
 	
-8.
+8.Eventually consistant:
+
+	activity of IAM realted will be saved else where and reflection will take time.
 	
 	
