@@ -160,6 +160,17 @@ Lab:
 	3.sudo su -
 	4.yum install -y mysql
 	5.mysql -h <End point name> -u <username> -p <database name>
+	
+	
+RDS FAQ:
+
+1.For each regional deployment,use RDS MySQL with a master in region nad read replica in HQ Region.
+2.when running myDB instances as a multi AZ deployment,we cannot use a standby for read/write manually.
+3.we can initiate force failover for MultiAZ DB instance deployment.
+4.during maaintanance window due to security patching DB instance can be offline.
+5.you can test DB instance against a new version before upgrading.
+6.When you run a DB Instance as a Multi-AZ deployment, the primary serves database writes and reads.
+7.if I modify a DB instance parameter group associated with the instance,you should always reboot tosee the effect.
 		
 	
 	
