@@ -19,6 +19,54 @@ Type of NoSQL:
 	3.Key-Value Database(Redis,DynamoDB)
 	4.GraphBase Database(Neo4J,FloackDB)
 	
+RDS Database Engine:
+	1.MS SQL server
+	2.MySQL:64 TB
+	3.Oracle
+	4.Aws Aurora:High & Best Throughput. 
+	5.PostgreSQL:Best among all with all reliable parameter.
+	6.Maria DB.
+	
+Two Ways of Licencing:
+	1.BYOL:Bring your own licence(can upload my licence)
+	2.Licence from AWS.
+	
+RDS Limit:
+	1.upto 40 database Instance can be created/account.
+	2.if we take from AWS licence max 10 database instance can be created.
+	3.max limit is 40 overall.
+	
+RDS Instance Storage:always EBS type of instance used always.
+
+	1.Database engine will be created inside EC2.but EC2 database can be accessible.
+	
+		A.General Purpose: Modarate usage
+			1.limit min-20GB
+					max-16384GB
+		B.Provisoned IOPS: OLTP workloads
+			1.limit min-100GB
+					max-16384GB
+					
+Templates of RDS instance:
+	1.Production
+	2.Dev/Test
+	3.Free Tier
+	
+DB Instance Size:
+	1.Standard Class:M series EC2 Inside:
+		Max-96vCPU
+		Min-384vCPU
+		EBS-1400MBPS
+	2.Memory Optimized:R and X series:
+		Max-768GB RAM
+			96vCPU GIB
+			14000MBPS Throughput.
+	3.Bustable:include T series:
+		Max-32GB RAM
+			8vCPU
+			1500MBPS
+
+	
 Multiple Availability Zone Criteria:
 	1.You can select Multi AZ option when you lunch RDS.(Multi AZ cannot be decided by user).
 	2.RDS creates Stand by in different AZ and in same region with synchronous update.
@@ -77,52 +125,8 @@ RDS Backups:
 	10.disable automatic back up->retention period to 0 days.
 	11.default retention period:7 days(1-35 days range can be allowed)
 	
-RDS Database Engine:
-	1.MS SQL server
-	2.MySQL:64 TB
-	3.Oracle
-	4.Aws Aurora:High & Best Throughput. 
-	5.PostgreSQL:Best among all with all reliable parameter.
-	6.Maria DB.
-	
-Two Ways of Licencing:
-	1.BYOL:Bring your own licence(can upload my licence)
-	2.Licence from AWS.
-	
-RDS Limit:
-	1.upto 40 database Instance can be created/account.
-	2.if we take from AWS licence max 10 database instance can be created.
-	3.max limit is 40 overall.
-	
-RDS Instance Storage:always EBS type of instance used always.
 
-	1.Database engine will be created inside EC2.but EC2 database can be accessible.
-	
-		A.General Purpose: Modarate usage
-			1.limit min-20GB
-					max-16384GB
-		B.Provisoned IOPS: OLTP workloads
-			1.limit min-100GB
-					max-16384GB
-					
-Templates of RDS instance:
-	1.Production
-	2.Dev/Test
-	3.Free Tier
-	
-DB Instance Size:
-	1.Standard Class:M series EC2 Inside:
-		Max-96vCPU
-		Min-384vCPU
-		EBS-1400MBPS
-	2.Memory Optimized:R and X series:
-		Max-768GB RAM
-			96vCPU GIB
-			14000MBPS Throughput.
-	3.Bustable:include T series:
-		Max-32GB RAM
-			8vCPU
-			1500MBPS
+
 		
 	
 	
