@@ -152,6 +152,14 @@ Billing:
 	3.back ups storage.
 	4.IOPS
 	5.Multi AZ utilization
+	
+	
+Lab:
+	1.create RDS instance.
+	2.create EC2 instance to conenct with RDS with same security group.
+	3.sudo su -
+	4.yum install -y mysql
+	5.mysql -h <End point name> -u <username> -p <database name>
 		
 	
 	

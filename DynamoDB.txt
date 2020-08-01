@@ -21,6 +21,7 @@ Basic of DynamoDB:
 		1.scaler type:Number,Binary,String
 		2.Document type: List,Map
 		3.Set types: String set,Binary Set.
+	7.item greater than 400 KB should be placed in S3 bucket and pointed bucket data into item.
 		
 Primary keys:
 	1A.partition key(Hash):
