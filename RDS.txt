@@ -131,7 +131,27 @@ RDS Backup process:
 	3.Manual snapshot will not be deleted automatically,once you delete RDS Instance from which snapshot taken.
 	4.take a final snap shot before deleting your RDS DB instances.
 	5.you can share Manual snapshot directly with other account.where as for automated backup snapshot must be copied and copy version will be shared.
-	6.
+	6.new instance cretaed will be as default and you have to customization.
+	7.Instance end poit will be changed.
+	
+RDS Encryption:
+	1.Encryption will be done time of creation.
+	2.Once encrypted will not be undone,no runtime change.
+	3.RDS supports Encryption at Rest for all DB Engines using KMS.
+	
+	
+What all data actually encrypted:
+	1.all its snapshots
+	2.Backups of DB.
+	3.Data on EBS
+	4.Read Replica created from snapshot.
+	
+Billing:
+	1.Storage GB/month
+	2.Data transfer via internet.
+	3.back ups storage.
+	4.IOPS
+	5.Multi AZ utilization
 		
 	
 	
