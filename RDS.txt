@@ -65,7 +65,6 @@ DB Instance Size:
 		Max-32GB RAM
 			8vCPU
 			1500MBPS
-
 	
 Multiple Availability Zone Criteria:
 	1.You can select Multi AZ option when you lunch RDS.(Multi AZ cannot be decided by user).
@@ -126,7 +125,13 @@ RDS Backups:
 	11.default retention period:7 days(1-35 days range can be allowed)
 	
 
-
+RDS Backup process:
+	1.In case of manual snapshot part in time recovery is not possible,for automated snapshot it will be taken 5 mins before.
+	2.Manual Snapshot will be stored in S3.
+	3.Manual snapshot will not be deleted automatically,once you delete RDS Instance from which snapshot taken.
+	4.take a final snap shot before deleting your RDS DB instances.
+	5.you can share Manual snapshot directly with other account.where as for automated backup snapshot must be copied and copy version will be shared.
+	6.
 		
 	
 	
