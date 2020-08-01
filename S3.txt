@@ -114,3 +114,13 @@ S3 Storage:
 		
 	
 	
+AWS uploaded image url:
+	
+	1.from console opentab:
+	https://bucket01-priyobratoxxxx.s3.ap-south-1.amazonaws.com/priyo_img.jpg?response-content-disposition=inline&X-Amz-Security-Token=XXXX
+	
+	2.from object url:
+	
+	https://bucket01-priyobratoxxxx.s3.ap-south-1.amazonaws.com/priyo_img.jpg
+	
+	
