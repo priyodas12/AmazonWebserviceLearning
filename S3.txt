@@ -126,7 +126,7 @@ AWS uploaded image url:
 	
 	AKIAQ5YYGUJDHKFBNUT4/3Ft6ml/CeZAKqaH3Ig3MYue8VXFzftm5DXi8TlEu
 	
-AWS CLI:
+AWS S3 CLI:
 	1.download AWS CLI
 	2.create new key/secret
 	3.aws configure
