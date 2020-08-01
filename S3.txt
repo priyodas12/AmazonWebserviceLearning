@@ -55,7 +55,7 @@ S3 Versioning:
 	7.MFA s3 delete can be enabled.
 	
 S3 Bucket Name convention:
-https://region-name.amazonaws.com/bucketName
+https://<region-name>.amazonaws.com/bucketName
 https://s3-eu-west1.amazonaws.com/mybucket
 	
 S3 Multipart Upload:
@@ -122,5 +122,21 @@ AWS uploaded image url:
 	2.from object url:
 	
 	https://bucket01-priyobratoxxxx.s3.ap-south-1.amazonaws.com/priyo_img.jpg
+	
+	
+	AKIAQ5YYGUJDHKFBNUT4/3Ft6ml/CeZAKqaH3Ig3MYue8VXFzftm5DXi8TlEu
+	
+AWS CLI:
+	1.download AWS CLI
+	2.create new key/secret
+	3.aws configure
+	4.enter key/secret details.
+	5.aws s3 ls
+	6.create bucket::aws s3 mb s3://bucket02-priyobrato19910707
+	7.See all object in bucket:aws s3 ls s3://bucket01-priyobrato19910606 --recursive
+	8.delete bucket::aws s3 rb s3://elasticbeanstalk-ap-south-1-063938404934 --force
+	9.sync with any bucket::aws s3 sync . s3://bucket01-priyobrato19910606
+	10.delete from local folder and do sync::aws s3 sync s3://bucket01-priyobrato19910606 .
+	11.remove all file::aws s3 rm s3://bucket01-priyobrato19910606 --recursive
 	
 	
