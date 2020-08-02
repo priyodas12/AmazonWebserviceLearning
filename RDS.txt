@@ -210,6 +210,8 @@ rest of the Read Replicas--The remaining Read Replicas will still replicate from
 14.When you use the AWS Management Console to delete an IAM user, IAM also deletes any signing certificates
 and any access keys belonging to the user--"DescribeEvents"
 
+15.Can I initiate a “forced failover” for my MySQL Multi-AZ DB Instance deployment--Yes
+
 
 
 

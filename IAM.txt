@@ -79,5 +79,12 @@ IAM FAQ:
 and any access keys belonging to the user-Yes
 
 4.What is the default maximum number of MFA devices in use per AWS account (at the root account level)?--1
+
+5.Can a user belong to multiple groups-Yes
+
+6.Is the encryption of connections between my application and my DB Instance using SSL for the MySQL server
+engines available?--Yes, this option is currently supported for the MySQL, MariaDB, SQL Server, PostgreSQL, and Oracle engines.
+
+7.
 	
 	
