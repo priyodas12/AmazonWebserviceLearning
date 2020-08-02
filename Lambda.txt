@@ -13,3 +13,14 @@ Lambda:
 
 you pay only for the compute time you consume no charge when your code is not running.
 
+currently running service language:
+	1.Node js
+	2.Java
+	3.Power shell
+	4.C#
+	5.Python
+	6.Ruby
+	7.Google Go2
+	
+Lambda-Function as a service
+EC2-Infrastructure as a service.
