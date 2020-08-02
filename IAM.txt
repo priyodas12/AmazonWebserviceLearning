@@ -66,5 +66,11 @@ IAM Terms:
 ------------------------------------------
 
 1.In regards to IAM you can edit user properties later, but you cannot use the console to change the-- username
+
+2.Accessing IAM:
+	1 – AWS Management Console
+	2 – AWS Command Line Tools
+	3 – AWS SDKs (i.e. Existing libraries)
+	4 – IAM HTTPS API
 	
 	

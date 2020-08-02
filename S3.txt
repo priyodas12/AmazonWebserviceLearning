@@ -145,3 +145,8 @@ AWS S3 CLI:
 	11.remove all file::aws s3 rm s3://bucket01-priyobrato19910606 --recursive
 	
 	
+---------------------------------------------
+
+1.Can the string value of ‘Key’ be prefixed with :aws:”? NO
+	
+	

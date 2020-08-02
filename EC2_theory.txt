@@ -155,8 +155,13 @@ https://console.aws.amazon.com/ec2/, click Volumes in the Navigation pane.
 
 11.What is the command line instruction for running the remote desktop client in Windows--mstsc
 
-12.
+12.Please select the Amazon EC2 resource which cannot be tagged.--Elastic IP addresses
 
+13.Because of the extensibility limitations of striped storage attached to Windows Server, Amazon RDS does not
+currently support increasing storage on a "SQL Server" DB Instance.
+
+
+14.How are the EBS snapshots saved on Amazon S3--Incrementally.
 
 	
 	
