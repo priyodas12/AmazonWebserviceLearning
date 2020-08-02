@@ -55,4 +55,4 @@ Beanstalk Lifecycle policy:
 	1.can store at most 1000 application versions.
 	2.if you dont remove old versions you wont be able to deploy any more.
 	3.versions are in use cant be deleted.
-	4.
+	

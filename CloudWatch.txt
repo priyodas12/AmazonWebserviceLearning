@@ -20,8 +20,61 @@ Cloudwatch Metrics:
 	3.Dimension is an attribute of a metric/events.
 	4.metrics have timestamp.
 	5.can create a dashboard of materics.
+	
+Metrics:
+	1.CPUUtilization,CPUCreditBalance,CPUCreditUsage,CPUSurplusCreditBalance
+	2.DiskReadOps
+	3.DiskWriteOps
+	4.DiskReadBytes
+	5.DiskWriteBytes
+	6.NetworkIn
+	7.NetworkOut
+	8.NetworkPacketsIn
+	9.NetworkPacketsOut
+	10.MetadataNoToken
+	11.EBSReadOps,EBSWriteOps
+	
+	
+	Example:
+	
+		{
+		  "Metrics": [
+			{
+				"Namespace": "AWS/EC2",
+				"Dimensions": [
+					{
+						"Name": "InstanceId",
+						"Value": "i-1234567890abcdef0"
+					}
+				],
+				"MetricName": "NetworkOut"
+			},
+			{
+				"Namespace": "AWS/EC2",
+				"Dimensions": [
+					{
+						"Name": "InstanceId",
+						"Value": "i-1234567890abcdef0"
+					}
+				],
+				"MetricName": "CPUUtilization"
+			},
+			{
+				"Namespace": "AWS/EC2",
+				"Dimensions": [
+					{
+						"Name": "InstanceId",
+						"Value": "i-1234567890abcdef0"
+					}
+				],
+				"MetricName": "NetworkIn"
+			},
+			...
+		  ]
+		}
 
-EC2 Deail MOnitoring:
+
+EC2 Detail MOnitoring:
 	1.by default in 5 minutes 
 	2.can be optimize upto 1 minute.
 	3.API call PutMetricData.
