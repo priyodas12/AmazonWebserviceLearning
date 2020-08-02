@@ -91,7 +91,7 @@ DynamoDB APIs:
 	
 	2.UpdateItem:Update data in Dyamo DB(partial update)
 	
-	3.COnditional Writes:
+	3.Conditional Writes:
 	Accept a write/update only if conditions are respected.
 	
 	4.DeleteItem: delete Individual row.
