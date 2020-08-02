@@ -163,6 +163,10 @@ currently support increasing storage on a "SQL Server" DB Instance.
 
 14.How are the EBS snapshots saved on Amazon S3--Incrementally.
 
+15.Can I delete a snapshot of the root device of an EBS volume used by a registered AMI--NO
+
+16.Do the Amazon EBS volumes persist independently from the running life of an Amazon EC2 instance-Yes
+
 	
 	
 	

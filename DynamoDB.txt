@@ -108,7 +108,10 @@ DynamoDB APIs:
 	
 	10.Scan: inefficient api will scan whole table,time consuming.
 	
-		
+------------------------------------------------------------------
+DynamoDB FAQ:
+
+1.What does Amazon ElastiCache provide-A managed In-memory cache service.	
 		
 		
 		

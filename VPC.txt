@@ -118,8 +118,15 @@ VPC Peering:
 	4. VPC A peers VPC B and VPC B peers VPC A,then communication between VPC A and C not possible,Transitive Peering.
 	
 ----------------------------------------------------------
+VPC FAQ:
+
 
 1.Can I use Provisioned IOPS with VPC?-Yes
+
+2.To ensure failover capabilities, consider using a _____ for incoming traffic on a network
+interface”.
+
+
 	
 	
 	

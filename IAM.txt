@@ -64,6 +64,8 @@ IAM Terms:
 	
 	
 ------------------------------------------
+IAM FAQ:
+
 
 1.In regards to IAM you can edit user properties later, but you cannot use the console to change the-- username
 
@@ -72,5 +74,10 @@ IAM Terms:
 	2 – AWS Command Line Tools
 	3 – AWS SDKs (i.e. Existing libraries)
 	4 – IAM HTTPS API
+	
+3.When you use the AWS Management Console to delete an IAM user, IAM also deletes any signing certificates
+and any access keys belonging to the user-Yes
+
+4.What is the default maximum number of MFA devices in use per AWS account (at the root account level)?--1
 	
 	

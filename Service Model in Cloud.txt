@@ -44,3 +44,5 @@ Deployment model:
 1.What are the four levels of AWS Premium Support--Basic, Developer, Business, Enterprise
 
 2.What can I access by visiting the URL: http://status.aws.amazon.com--AWS Service Health Dashboard
+
+3.What is the maximum response time for a Business level Premium Support case-1hr

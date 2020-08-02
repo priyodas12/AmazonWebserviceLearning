@@ -146,6 +146,8 @@ AWS S3 CLI:
 	
 	
 ---------------------------------------------
+S3 FAQ:
+
 
 1.Can the string value of ‘Key’ be prefixed with :aws:”? NO
 	

@@ -18,6 +18,7 @@ Depolying ColudFromation Templates:
 	
 	
 -----------------------------------------
+CloudFormation FAQ:
 
 What does Amazon CloudFormation provide?A templated resource creation for Amazon Web Services
 	
