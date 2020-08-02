@@ -124,8 +124,6 @@ AWS uploaded image url:
 	https://bucket01-priyobratoxxxx.s3.ap-south-1.amazonaws.com/priyo_img.jpg
 	
 	
-	AKIAQ5YYGUJDHKFBNUT4/3Ft6ml/CeZAKqaH3Ig3MYue8VXFzftm5DXi8TlEu
-	
 AWS S3 CLI:
 	1.download AWS CLI
 	2.create new key/secret

@@ -48,6 +48,27 @@ Minimum memory for lambda 128MB to 3008MB maximum, memory should be increased by
 
 greater than 1536MB momory function aws will provide multiple CPU thread will provide.
 
+minimum run time for lambda-3 secound
+maximum run time for lambda function is 900sec(15min)
+
+lambda can access aws service and non aws services.
+
+non aws services running on ec2 instances in an aws vpc or ec2.
+
+however to access the aws or non aws service running in private vpc access is needed.
+
+Different type of lambda invocation:
+
+	A.Synchronous invoke
+	B.Asynchronous 
+	C.Poll based.
+
+
+
+
+
+
+
 	
 
 	
