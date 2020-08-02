@@ -149,7 +149,13 @@ https://console.aws.amazon.com/ec2/, click Volumes in the Navigation pane.
 
 8.You must increase storage size in increments of at least 10%
 
-9.CreateSnapshot creating the snapshots using the API
+9.CreateSnapshot creating the snapshots using the API.
+
+10.Are Reserved Instances available for Multi-AZ Deployments--Yes for all instance types
+
+11.What is the command line instruction for running the remote desktop client in Windows--mstsc
+
+12.
 
 
 	

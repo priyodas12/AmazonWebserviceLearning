@@ -117,6 +117,10 @@ VPC Peering:
 	
 	4. VPC A peers VPC B and VPC B peers VPC A,then communication between VPC A and C not possible,Transitive Peering.
 	
+----------------------------------------------------------
+
+1.Can I use Provisioned IOPS with VPC?-Yes
+	
 	
 	
 	

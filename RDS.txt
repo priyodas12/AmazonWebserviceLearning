@@ -195,6 +195,27 @@ The Point-In-Time-Restore and Snapshot Restore features of Amazon RDS for MySQL 
 8.When should I choose Provisioned IOPS over Standard RDS storage-OLTP
 
 9.What is the minimum charge for the data transferred between Amazon RDS and Amazon EC2 Instances in the same Av-Free
+
+10. If you add a tag that has the same key as an existing tag on a DB Instance, the new value
+overwrites the old value-Yes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	

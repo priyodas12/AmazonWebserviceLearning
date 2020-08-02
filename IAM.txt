@@ -63,3 +63,8 @@ IAM Terms:
 	6.Resources
 	
 	
+------------------------------------------
+
+1.In regards to IAM you can edit user properties later, but you cannot use the console to change the-- username
+	
+	
