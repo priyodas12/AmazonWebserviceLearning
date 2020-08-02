@@ -43,6 +43,12 @@ Downstream resources:
 Concurrency:
 	No of request that your funtion runs serves in any given time.
 	
+	
+Minimum memory for lambda 128MB to 3008MB maximum, memory should be increased by 64MB multiplication,
+
+greater than 1536MB momory function aws will provide multiple CPU thread will provide.
+
+	
 
 	
 
