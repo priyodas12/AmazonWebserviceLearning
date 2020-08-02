@@ -132,7 +132,13 @@ EC2 FAQ:
 1./dev/sdc=none,Prevents /dev/sdc from attaching to the instance.
 Suppresses an existing mapping of the device from the AMI used to launch the instance. For example: “/dev/sdc=none”.
 
-2.
+2.A security group acts as a virtual firewall that controls the traffic for one or more instances.
+
+3.ec2-create-group CreateSecurityGroup-->Creates a new security group for use with your account.
+
+4.While performing the volume status checks, if the status is insufficient-data-->the checks may still be in progress on the volume
+
+5.
 
 
 	
