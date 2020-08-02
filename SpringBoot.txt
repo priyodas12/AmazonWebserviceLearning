@@ -1,0 +1,38 @@
+Spring boot Internal working:
+
+Spring-boot-autoconfiguration/META-INF/spring.factories
+
+all dependency jar defined.
+
+each configuration class having some conditions to enebale
+
+like
+
+@ConditionalOnBean({Datasource.class})->checks if a bean in the Spring factory.
+@ConditionalOnClass({JpaRepository.class})->checks if a class is on classpath.
+@ConditionalOnProperty()->checks property exists
+@Import
+@AutoCOnfigurationAfter
+
+
+@SpringBootAnnotation->@configuration
+					   @EnableAutoCOnfiguration
+					   @componentScan
+
+
+
+the main application context is kicked off which in turns searchs for the classes annotated with @configuration ,initializes all the declared bean in those configuration classes store those beans in IOC container.
+
+after this configures the dspatcher servlet and registers the default handler mappings.
+
+
+create application context
+
+check application type(web,servlet,reactive type)
+based on than enebales context.
+
+register annotated class beans with context
+
+creates an instance of tomcatembeddedservletContainer and adds context.
+
+
