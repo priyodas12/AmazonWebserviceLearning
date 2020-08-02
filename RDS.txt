@@ -177,12 +177,24 @@ RDS FAQ:
 RDS FAQ:
 
 
-Q: What storage engines does Amazon RDS for MySQL support?
+1.What storage engines does Amazon RDS for MySQL support?
 The Point-In-Time-Restore and Snapshot Restore features of Amazon RDS for MySQL require a crash-recoverable storage engine and are supported for InnoDB storage engine only. While MySQL supports multiple storage engines with varying capabilities, not all of them are optimized for crash recovery and data durability. For example, MyISAM storage engine does not support reliable crash recovery and may result in lost or corrupt data when MySQL is restarted after a crash, preventing Point-In-Time-Restore or Snapshot restore from working as intended. However, if you still choose to use MyISAM with Amazon RDS, following these steps may be helpful in certain scenarios for DB snapshot restore functionality. Federated Storage Engine is currently not supported by Amazon RDS for MySQL.
 
+2.Oracle SQL Developer-->A graphical Java tool distributed without cost by Oracle.	
+
+3.Amazon RDS does not allow direct host access via Telnet, Secure Shell (SSH), or Windows Remote Desktop Connection
 	
-	
-	
+4.What is an isolated database environment running in the cloud (Amazon RDS) called DB Instance
+
+5.What happens to the I/O operations while you take a database snapshot--I/O operations to the database are suspended for a few minutes while the backup is in progress.
+
+6.Read Replicas require a transactional storage engine and are only supported for the InnoDB storage engine
+
+7.When running my DB Instance as a Multi-AZ deployment, can I use the standby for read or write operations-NO
+
+8.When should I choose Provisioned IOPS over Standard RDS storage-OLTP
+
+9.What is the minimum charge for the data transferred between Amazon RDS and Amazon EC2 Instances in the same Av-Free
 	
 	
 	

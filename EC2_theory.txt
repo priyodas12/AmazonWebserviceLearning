@@ -144,6 +144,13 @@ specifications.
 
 6.For each DB Instance class, what is the maximum size of associated storage capacity-6TB
 
+7.To view information about an Amazon EBS volume, open the Amazon EC2 console at
+https://console.aws.amazon.com/ec2/, click Volumes in the Navigation pane.
+
+8.You must increase storage size in increments of at least 10%
+
+9.CreateSnapshot creating the snapshots using the API
+
 
 	
 	
