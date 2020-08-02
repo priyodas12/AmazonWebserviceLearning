@@ -1,0 +1,12 @@
+Lambda:
+	1.Lambda is a compute service that lets you run code without provisoning or managing service.
+	2.with lambda you can run code for virtually any type of application or backend service.
+	3.lambda manages all admin works
+		A.provisoning and capcacity of computing,balance of memory.
+		B.OS maintaing
+		C.High availability and auto scaling.
+		D.Monitoring fleet health.
+		E.Applying security patchs
+		F.Deploying your code.
+		G.Monitoring and logging of lambda function.
+		F.HIgh availability compute infra.
