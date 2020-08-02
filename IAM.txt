@@ -53,3 +53,13 @@ IAM:
 	activity of IAM realted will be saved else where and reflection will take time.
 	
 	
+IAM Terms:
+
+	1.Principal
+	2.Request
+	3.Authentication
+	4.Authorization
+	5.Action/Ops
+	6.Resources
+	
+	

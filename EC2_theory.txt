@@ -126,6 +126,16 @@ Instances User Data:
 	2.16KB max size of the script.
 	3.This data cannot be encrypted.
 	
+-----------------------------------------------------
+EC2 FAQ:
+
+1./dev/sdc=none,Prevents /dev/sdc from attaching to the instance.
+Suppresses an existing mapping of the device from the AMI used to launch the instance. For example: “/dev/sdc=none”.
+
+2.
+
+
+	
 	
 	
 	

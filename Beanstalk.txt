@@ -40,3 +40,19 @@ Before Starting with Beanstalk:
 	1.terminate running EC2,ALB,ASG.
 	
 1 Application-->Multiple Environment
+
+Deploymet Mode:
+	1.Single instance 
+	2.High Availbility with load balancer.
+	
+Deployment Options:
+	1.All At Once(downtime persists)
+	2.ROlling
+	3.ROlling with Additional Batch
+	4.Immutable
+
+Beanstalk Lifecycle policy:
+	1.can store at most 1000 application versions.
+	2.if you dont remove old versions you wont be able to deploy any more.
+	3.versions are in use cant be deleted.
+	4.

@@ -173,7 +173,12 @@ RDS FAQ:
 7.if I modify a DB instance parameter group associated with the instance,you should always reboot tosee the effect.
 		
 	
-	
+----------------------------------------------
+RDS FAQ:
+
+
+Q: What storage engines does Amazon RDS for MySQL support?
+The Point-In-Time-Restore and Snapshot Restore features of Amazon RDS for MySQL require a crash-recoverable storage engine and are supported for InnoDB storage engine only. While MySQL supports multiple storage engines with varying capabilities, not all of them are optimized for crash recovery and data durability. For example, MyISAM storage engine does not support reliable crash recovery and may result in lost or corrupt data when MySQL is restarted after a crash, preventing Point-In-Time-Restore or Snapshot restore from working as intended. However, if you still choose to use MyISAM with Amazon RDS, following these steps may be helpful in certain scenarios for DB snapshot restore functionality. Federated Storage Engine is currently not supported by Amazon RDS for MySQL.
 
 	
 	
