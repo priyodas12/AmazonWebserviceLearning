@@ -212,6 +212,8 @@ and any access keys belonging to the user--"DescribeEvents"
 
 15.Can I initiate a “forced failover” for my MySQL Multi-AZ DB Instance deployment--Yes
 
+16.Multi-AZ deployment ___________ supported for Microsoft SQL Server DB Instances.--is planned to be in 2014
+
 
 
 
