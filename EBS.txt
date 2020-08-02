@@ -75,3 +75,14 @@ SnapShots:
 	
 Incremental SnapShots:
 
+
+
+
+Block Storage vs Object Storage:
+
+Block Storage:
+	Strong performance with database and transactional data,no metadata.
+
+Object Storage:
+	Performs best for big content and high stream throughput as Customizable metadata allows data to be easily organized and retrieved
+

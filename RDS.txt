@@ -214,6 +214,9 @@ and any access keys belonging to the user--"DescribeEvents"
 
 16.Multi-AZ deployment ___________ supported for Microsoft SQL Server DB Instances.--is planned to be in 2014
 
+17.If your DB instance runs out of storage space or file system resources, its status will change to_____ and your
+DB Instance will no longer be available.--storage-full
+
 
 
 
