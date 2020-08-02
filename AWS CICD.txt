@@ -1,11 +1,11 @@
 AWS CICD:
 	1.Aws Codecommit: Storing our code.
-	pipeline form Code to ELasticbeanstalk.
+	pipeline form Code to Elasticbeanstalk.
 	2.AWS Codebuild: build and testing our code.
 	3.Aws Codedeploy:deploy our code.
 	4.AWS Codepipeline: Automating out 
 
-COntinuous Integration:
+Continuous Integration:
 	1.Developers push the cods to a code repository often(Github/Codecommit/Bitbucket)
 	
 	2.A testing/build server checks the code as soon as its pushed(Codebuild/Jenkins CI)
@@ -17,7 +17,7 @@ COntinuous Integration:
 	5.Deliver faster code is tested,deploy ofter.
 	
 Continuous Delivery:
-	1.Ensure that the software can be released reliaby whenever needed.
+	1.Ensure that the software can be released reliably whenever needed.
 	
 	2.Ensures deployments happen ofter and quick.
 	
@@ -62,8 +62,8 @@ Code commit Security:
 	5.Encryption is done by KMS.
 	6.Cross account Access:
 		1.Use IAM roles for others to use.
-		3.AWS STS.
-	7.Code COmmit can be Integrated with SNS.
+		3.AWS STS
+	7.Code Commit can be Integrated with SNS.
 	
 Code Pipeline:
 	1.Continuous delivery
@@ -98,17 +98,39 @@ Overview:
 	7.java,ruby,python,go,android,.net,php,node.js,Docker can extend any envirnment.
 	
 	SourceCode(codecommit)<buildspec.yml>-->
-	Build DOcker Image(AWS managed or Custom)-->CodeBuild Container(running on Build Docker Image,runs instruction from buildspec.yml)-->AWS S3 Cache Bucket-->AWS S3 Bucket Artifacts-->saves logs in AWS CLoudWatch.
+	Build Docker Image(AWS managed or Custom)-->CodeBuild Container(running on Build Docker Image,runs instruction from buildspec.yml)-->AWS S3 Cache Bucket-->AWS S3 Bucket Artifacts-->saves logs in AWS CLoudWatch.
 	
 BuildSpec.yml:
 	1.must be in root of your code.
 	2.define environment variable
-	3.pahses:
+	3.phase:
 		A.Install: dependencies.
 		B.Prebuild: insturction
 		C.Build:
 		D.PostBuild:
 	4.Artifcats will be uploaded in S3.
+	
+	example::
+	
+		version: 0.2
+
+		phases:
+		  install:
+			runtime-versions:
+			  java: corretto11
+		  pre_build:
+			commands:
+			  - echo Nothing to do in the pre_build phase...
+		  build:
+			commands:
+			  - echo Build started on `date`
+			  - mvn install
+		  post_build:
+			commands:
+			  - echo Build completed on `date`
+		artifacts:
+		  files:
+			- target/messageUtil-1.0.jar
 	
 	
 AWS CodeDeploy:
@@ -142,15 +164,40 @@ AppSpec.yml:
 	1.File section:how to source from S3.
 	2.Hooks: set of instruction to deploy new version
 		A.ApplicationStop
-		B.DOwnloadBundle
+		B.DownloadBundle
 		C.BeforeInstall
 		D.AfterInstall
 		C.ApplicationStart
 		E.ValidaeService:(important)
-	
+		
+	example::
+		version: 0.0
+		os: linux
+		files:
+		  - source: /
+			destination: /var/www/html/WordPress
+		hooks:
+		  BeforeInstall:
+			- location: scripts/install_dependencies.sh
+			  timeout: 300
+			  runas: root
+		  AfterInstall:
+			- location: scripts/change_permissions.sh
+			  timeout: 300
+			  runas: root
+		  ApplicationStart:
+			- location: scripts/start_server.sh
+			- location: scripts/create_test_db.sh
+			  timeout: 300
+			  runas: root
+		  ApplicationStop:
+			- location: scripts/stop_server.sh
+			  timeout: 300
+			  runas: root
+			
 	
 AWS CodeStar:
-	1.integrated service solution that regroups:github,codecommit,codebuild,codedeploy,clodformation,codepipeline,cloudwatch
+	1.Integrated service solution that regroups:github,codecommit,codebuild,codedeploy,clodformation,codepipeline,cloudwatch
 	2.helps quickly create CICD ready projects for EC2,ambda,Beanstalk.
 	3.Integarted tracking issue:with JIRA/Github.
 	4.Integrated with Cloud9 for web IDE.
