@@ -138,7 +138,11 @@ Suppresses an existing mapping of the device from the AMI used to launch the ins
 
 4.While performing the volume status checks, if the status is insufficient-data-->the checks may still be in progress on the volume
 
-5.
+5.By default, when an EBS volume is attached to a Windows instance, it may show up as any drive letter on the
+instance. You can change the settings of the "Ec2Config Service" Service to set the drive letters of the EBS volumes per your
+specifications.
+
+6.For each DB Instance class, what is the maximum size of associated storage capacity-6TB
 
 
 	
