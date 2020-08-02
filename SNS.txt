@@ -1,0 +1,12 @@
+SNS:
+
+	What happens when you create a topic on Amazon SNS--
+	
+	An ARN (Amazon Resource Name) is created.
+
+		To create a topic
+		1. In the Amazon SNS console, click Create topic.The Create topic dialog box appears.
+		2. In the Topic name box, type a topic name.
+		3. Click Create topic.The new topic appears in the Topics page.
+		4. Select the new topic and then click the topic ARN.The Topic Details page appears.
+		5. Copy the topic ARN for the next task.

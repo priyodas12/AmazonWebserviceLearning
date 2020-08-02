@@ -205,6 +205,8 @@ rest of the Read Replicas--The remaining Read Replicas will still replicate from
 12.Can I encrypt connections between my application and my DB Instance using SSL--Yes
 
 
+13.The new DB Instance that is created when you promote a Read Replica retains the backup window period-True
+
 
 
 
