@@ -199,6 +199,11 @@ The Point-In-Time-Restore and Snapshot Restore features of Amazon RDS for MySQL 
 10. If you add a tag that has the same key as an existing tag on a DB Instance, the new value
 overwrites the old value-Yes
 
+11.If I have multiple Read Replicas for my master DB Instance and I promote one of them, what happens to the
+rest of the Read Replicas--The remaining Read Replicas will still replicate from the older master DB Instance
+
+12.Can I encrypt connections between my application and my DB Instance using SSL--Yes
+
 
 
 

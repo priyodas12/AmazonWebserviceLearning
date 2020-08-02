@@ -17,3 +17,8 @@ Depolying ColudFromation Templates:
 	2.Automated way- editing templates in a YAML file.
 	
 	
+-----------------------------------------
+
+What does Amazon CloudFormation provide?A templated resource creation for Amazon Web Services
+	
+	
