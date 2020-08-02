@@ -31,6 +31,19 @@ Function:
 Runtime:
 	lambda runtimes allows function in different languages to run in the same base execution engine.
 
+Event:
+	a Json formatted documentation that contains data for the function.
+	
+Event Source/Trigger:
+	an aws service such as SNS,or a custom service that triggers your function and executes its logic.
+	
+Downstream resources:
+	aws services such as dynamo db tables or s3 bucket that triggers your function and executes its logic.
+	
+Concurrency:
+	No of request that your funtion runs serves in any given time.
+	
+
 	
 
 
