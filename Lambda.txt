@@ -10,3 +10,6 @@ Lambda:
 		F.Deploying your code.
 		G.Monitoring and logging of lambda function.
 		F.HIgh availability compute infra.
+
+you pay only for the compute time you consume no charge when your code is not running.
+
