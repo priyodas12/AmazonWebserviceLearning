@@ -1,0 +1,60 @@
+AutoScaling:
+	1.Region Specific
+	2.always should evenly creates server in different AZ.
+	3.creates  groups of EC2 instances that can scale out and scale in depending up situation.
+	4.Enable Elasticity by scaling Horizontally.
+	5.AutoScaling Ensures that you have the right number of AWS EC2 instances for your need at all time.
+	6.Autoscaling helps you save cost by scaling down the EC2 numbers.
+	7.if auto scaling finds that the number of EC2 instances lunched by ASG into Subject AZs is not balanced(not evenly distributed)then ASG will do this distribution by itself.
+	8.if we add or delete some subnet then disbalance happens.
+	9.Manual request for tremination EC2 can also causes this disbalance.
+	10.we can also attach EC2 manually with ASG
+		A.AMI used to lunch the EC2 Still Exist.
+		B.Instance is not part of another Auto Scaling Group.
+		C.Instance is the same AZ of the same Group.
+	11.You can manually remove EC2 instances froma autoscaling group using CLI and COnsole.
+	12.when you delete an autosccaling group its parameters like max,min desied capacity all all set to zero.Hence it terminates all its EC2 instances.
+	13.if want to keep the EC2 instances and amanages then independly you can manually detach them first then delete the ASG. 
+	14.we can attach one or more ELB toour ASG.ASG and ELB must be in same Region.
+	15.Instance and ELB must in same VPC.
+	
+	
+HealthCheck:
+	1.AutoScaling classifies its EC2 instance health status as either healthy or unhealthy.
+	2.By Default As Uses EC2 Status checks only to determines the health status of an Instance.
+	3.WHen you have one or more ELB defined with the Autoscaling group you can configure Auto scaling group to use both EC2 health check and ELB health check to determine the Instance health.
+	4.every 300 sec health check will happen.
+	5.after grace period(300 if not reply)
+	Consider as Instance will be considered as unhealthy.
+		A.EC2 status check report to Auto scaling group as instance status other than Running.
+		B.If ELB Healthcheck are configured to be used by the auto scaling then if the ELB reports the instance as "Out of Service"
+		C.Unlike AZ Rebalancing,Termination of Unhealthy instances happen first the auto scaling attempt to lunch new instance to replace the ones terminated.
+		D.Elastic IP and EBS volumes gets detachs from the terminated instances,you need to mnually attach to new instances.
+		
+SNS Notication:
+	1.if instance is lunched.
+	2.an instance is terminated
+	3.if instance is failed to lunch.
+	4.An instance fails to terminate.
+	
+	merging of auto scaling group can be done through CLI.
+	
+	Lunch configuration can not be editted.
+	either deleted or newly be created.
+	
+	
+Stand By State:
+	1.you can manually move to stnad by.
+	traffice will not go to this ec2 but ASG will maintain connectivity,but health check will not be done.
+	
+Scaling Policy:
+	1.Manual
+	2.Dynamic
+	
+	
+	
+Lunch Configuration:
+AutoScaling Group:
+Scaling Policy:
+	
+	
