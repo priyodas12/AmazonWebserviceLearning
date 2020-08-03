@@ -22,7 +22,7 @@ AutoScaling:
 HealthCheck:
 	1.AutoScaling classifies its EC2 instance health status as either healthy or unhealthy.
 	2.By Default As Uses EC2 Status checks only to determines the health status of an Instance.
-	3.WHen you have one or more ELB defined with the Autoscaling group you can configure Auto scaling group to use both EC2 health check and ELB health check to determine the Instance health.
+	3.When you have one or more ELB defined with the Autoscaling group you can configure Auto scaling group to use both EC2 health check and ELB health check to determine the Instance health.
 	4.every 300 sec health check will happen.
 	5.after grace period(300 if not reply)
 	Consider as Instance will be considered as unhealthy.
@@ -56,5 +56,7 @@ Scaling Policy:
 Lunch Configuration:
 AutoScaling Group:
 Scaling Policy:
+
+6ZTG@;FMblpR%TTrscBIOzsU)Y?L2SsO
 	
 	
