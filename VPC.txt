@@ -52,7 +52,7 @@ Public Subnet:
 Private Subnet:
 	this subnet will not have no route to IG.
 	
-when you create a vPC ypu must specify on IPV4 CIDR block for VPC the allowed block /16 to /28 network.
+when you create a VPC you must specify on IPV4 CIDR block for VPC the allowed block /16 to /28 network.
 
 Inside subnet:these 5 will be blocked.
  suppose 10.0.0.0/16 for a subnet
@@ -76,6 +76,7 @@ Implied Router & Route Table:
 	
 	
 Internet Gateway:
+
 	1.logical entity(virtual)
 	2.virtual router that connects a VPC with internet.
 	3.default VPC by default attached to Interenet Gateway.
