@@ -1,4 +1,7 @@
 VPC(Virtual Private cloud):
+
+A virtual private cloud is a virtual network that closely resembles a traditional networking that you can operate in your own datacenter,with the benefits of using the scalable infrastructure of AWS.
+
 	1.per Region max 5 VPC can be created.(not in Account)
 	2.per VPC max 200Subnet we can create.
 	max 200 subnet can be created.(5*200=1000 per region)
