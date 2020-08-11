@@ -73,6 +73,7 @@ Implied Router & Route Table:
 	3.each subnet must be associated only one route table at a time.
 	4.if you not associate with any route table by default it will be associated with default route table.
 	5.main route table cant be deleted,and it can be modified.
+	6.multiple subnet can  be associated with route table.
 	
 	
 Internet Gateway:
