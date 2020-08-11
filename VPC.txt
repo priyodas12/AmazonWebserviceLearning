@@ -65,7 +65,7 @@ to check public subnet->check route table->any logged IP with IG.
 
 public and private subnet can talk inside VPC thrugh route table.
 
-Implied Route & Route Table:
+Implied Router & Route Table:
 
 	1.200 route table/VPC
 	2.50 entry/route table
