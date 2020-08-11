@@ -13,12 +13,16 @@ VPC default template:
 	3.5 elastic IP we can take per account.
 	4.once VPC created DHCP,NACL and Security group will be created automatically.
 	5.VPC will be created in Region.
+	6.other user can create VPC with same CIDR but while peering both CIDR VPC should be different.
 
 Default VPC:
+
 	1.can be deleted.(if deleted can be restored)
 	2.has default CIDR,Security Grp,NACL,and ROute Table.
 	3.has default Internet Gatway.
+	
 Customed VPC:
+
 	1.As per requirement.
 	2.CIDR can be decided CIDR.
 	3.IG has to be created.
