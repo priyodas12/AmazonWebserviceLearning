@@ -27,6 +27,9 @@ Customed VPC:
 	2.CIDR can be decided CIDR.
 	3.IG has to be created.
 	
+VPC: Region Specific;
+SUBNET: Availability Zone Specific.
+
 This sequence must be followed by:
 
 Create VPC:->Create Subnet->Create IG->Create Route Table
