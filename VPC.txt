@@ -19,10 +19,10 @@ VPC default template:
 Default VPC:
 
 	1.can be deleted.(if deleted can be restored)
-	2.has default CIDR,Security Grp,NACL,and ROute Table.
+	2.has default CIDR,Security Grp,NACL,and Route Table.
 	3.has default Internet Gatway.
 	
-Customed VPC:
+Customed VPC:(10,172,192 range preferred)
 
 	1.As per requirement.
 	2.CIDR can be decided CIDR.
