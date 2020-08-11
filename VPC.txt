@@ -34,6 +34,16 @@ This sequence must be followed by:
 
 Create VPC:->Create Subnet->Create IG->Create Route Table
 
+while creating subnet you have to always look for different the network ids;
+
+suppose:we have vpc created 10.0.0.0/16
+
+and we are creating subnets:
+							10.0.0.0/24
+							10.0.1.0/24
+							
+							both of public and private having different network.
+
 Public Subnet:
 	if a subnet having tarffice direct to IG.
 	Ec2 Instance should have public IP
