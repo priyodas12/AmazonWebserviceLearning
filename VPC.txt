@@ -15,6 +15,9 @@ VPC default template:
 	5.VPC will be created in Region.
 	6.other user can create VPC with same CIDR but while peering both CIDR VPC should be different.
 	7.Inside VPC private and public instance can talk to each other.
+	
+VPC: Region Specific;
+SUBNET: Availability Zone Specific.
 
 Default VPC:
 
@@ -27,9 +30,6 @@ Customed VPC:(10,172,192 range preferred)
 	1.As per requirement.
 	2.CIDR can be decided CIDR.
 	3.IG has to be created.
-	
-VPC: Region Specific;
-SUBNET: Availability Zone Specific.
 
 This sequence must be followed by:
 
