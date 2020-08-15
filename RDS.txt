@@ -174,7 +174,7 @@ RDS FAQ:
 		
 	
 ----------------------------------------------
-RDS FAQ:
+RDS MCQ:
 
 
 1.What storage engines does Amazon RDS for MySQL support?
@@ -216,6 +216,37 @@ and any access keys belonging to the user--"DescribeEvents"
 
 17.If your DB instance runs out of storage space or file system resources, its status will change to_____ and your
 DB Instance will no longer be available.--storage-full
+---------------------------------------------------------------------------
+RDS FAQ:
+
+Q: How many DB instances can I run with Amazon RDS?
+
+By default, customers are allowed to have up to a total of 40 Amazon RDS DB instances. Of those 40, up to 10 can be Oracle or SQL Server DB instances under the "License Included" model. All 40 can be used for Amazon Aurora, MySQL, MariaDB, PostgreSQL and Oracle under the "BYOL" model. Note that RDS for SQL Server has a limit of up to 100 databases on a single DB instance to learn more see the Amazon RDS SQL Server User Guide.
+
+Q: How many databases or schemas can I run within a DB instance?
+
+RDS for Amazon Aurora: No limit imposed by software
+RDS for MySQL: No limit imposed by software
+RDS for MariaDB: No limit imposed by software
+RDS for Oracle: 1 database per instance; no limit on number of schemas per database imposed by software
+RDS for SQL Server: Up to 100 databases per instance see here: Amazon RDS SQL Server User Guide
+RDS for PostgreSQL: No limit imposed by software
+
+
+Q: Can I test my DB instance with a new version before upgrading?
+
+Yes. You can do so by creating a DB snapshot of your existing DB instance, restoring from the DB snapshot to create a new DB instance, and then initiating a version upgrade for the new DB instance. You can then experiment safely on the upgraded copy of your DB instance before deciding whether or not to upgrade your original DB instance.
+
+Q: How will I be charged and billed for my use of Amazon RDS?
+You pay only for what you use, and there are no minimum or setup fees. You are billed based on:
+
+DB instance hours – Based on the class (e.g. db.t2.micro, db.m4.large) of the DB instance consumed. Partial DB instance hours consumed are billed as full hours.
+Storage (per GB per month) – Storage capacity you have provisioned to your DB instance. If you scale your provisioned storage capacity within the month, your bill will be pro-rated.
+I/O requests per month – Total number of storage I/O requests you have (for Amazon RDS Magnetic Storage and Amazon Aurora only)
+Provisioned IOPS per month – Provisioned IOPS rate, regardless of IOPS consumed (for Amazon RDS Provisioned IOPS (SSD) Storage only)
+Backup Storage – Backup storage is the storage associated with your automated database backups and any customer-initiated database snapshots. Increasing your backup retention period or taking additional database snapshots increases the backup storage consumed by your database.
+Data transfer – Internet data transfer in and out of your DB instance.
+
 
 
 
