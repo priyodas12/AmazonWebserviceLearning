@@ -40,22 +40,29 @@ A.SSD(Solid State Drive)-Bootable,Throughput measured by IOPS/GB
 		b.4GB to 16TB
 		c.for applicable for mission critical application(milisecond sensitive data-rocket lunching apps)
 B.HDD(Hard Disk Drive)-Non Bootable,throughput measued by MB/sec
+
 	1.Throughput Optimised HDD.
+	
 		a.500GB to 16TB
 		b.500IOPS
 		c.Big data and Warehouse
+	
 	2.Cold HDD.
+	
 		a.Lowest cost
 		b.best for file servers
 		c.250IOPS
 		d.500GB to 16TB
+		
 C.Magnetic Standard-Bootable.
+
 	1.Cheapest ever
 	2.volumes applicable for infrequesntly accessed machine
 	3.1GB to 1TB
 	4.40 to 200 IOPS
 	
 SnapShots:
+
 	1.Point in time image copy.
 	2.stored in S3.
 	3.1st time snapshot taking more time,incremtal snapshot taking less time.

@@ -23,11 +23,12 @@ Ccompute Optimized:
 	1.Compute bound/intensive Application.
 	2.cost effective for compute.
 		C-Series:
-		C4,C5,C5n
-		Virtual CPU:2 to 36
-		RAM:3.75 to 60GB
-		EBS only
-		Webserver,Batch processing,Video gaming.
+			C4,C5,C5n
+			Virtual CPU:2 to 36
+			RAM:3.75 to 60GB
+			EBS only
+			Webserver,Batch processing,Video gaming.
+			
 Memory Optimized Instance:
 	    R,X,Z Series
 		

@@ -150,7 +150,7 @@ VPC Peering:
 	
 NAT Instance:(cheaper than NAT G)
 	
-	1.you can use NAT instance in apublic subnet in your VPC to enabe instances in ther private subnet to initiate outbound ,IPV4 traffic to internet or other service.
+	1.you can use NAT instance in a public subnet in your VPC to enabe instances in ther private subnet to initiate outbound ,IPV4 traffic to internet or other service.
 	
 	NAT instance does not support IPV6,egress only internet.
 	
