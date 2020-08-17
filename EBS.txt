@@ -81,6 +81,10 @@ SnapShots:
 	15.Root volume snapshot only be taken in stop stage.(for instance store you have to pause).
 	
 Incremental SnapShots:
+	
+	1.EBS snap shot will be created incrementally.
+	
+	
 
 
 
