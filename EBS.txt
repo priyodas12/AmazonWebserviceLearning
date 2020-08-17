@@ -80,13 +80,17 @@ SnapShots:
 	14.To take complete snapshot you have to stop root volume.(applicable for EBS)
 	15.Root volume snapshot only be taken in stop stage.(for instance store you have to pause).
 	
-Incremental SnapShots:
+Incremental SnapShots:(to overcome snapshot size)
 	
 	1.EBS snap shot will be created incrementally.
 	
 	EC2 and assocaited EBS will be in same AZ,but snapshot will be created in another S3 in same region, from this S3 EBS snapshot you can create another instance in different AZ.
 	
 	2. Snapshot will be taken for only consumed volume,blank data will be added while another EC2 will be created.
+	
+EBS Encryption:
+	
+	1.
 
 
 
