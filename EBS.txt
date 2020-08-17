@@ -84,6 +84,8 @@ Incremental SnapShots:
 	
 	1.EBS snap shot will be created incrementally.
 	
+	EC2 and assocaited EBS will be in same AZ,but snapshot will be created in another S3 in same region, from this S3 EBS snapshot you can create another instance in different AZ.
+	
 	
 
 
