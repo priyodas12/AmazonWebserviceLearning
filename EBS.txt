@@ -98,7 +98,7 @@ EBS Encryption:
 	
 	4.while doing encryption it first done on ec2 instance,then transfered.
 	
-	5.directly encryption of root volume cant be done.
+	5.by default directly encryption of root volume cant be done.
 	
 Root Volume Encryption:
 	
@@ -117,6 +117,8 @@ Root Volume Encryption:
 	7.this result as encrypted AMI that is private.
 	
 	8.use the encrypted AMI to lunch new EC2 instance which will have the EBS root volume encrypted.
+	
+
 	
 	
 
