@@ -64,7 +64,7 @@ C.Magnetic Standard-Bootable.
 SnapShots:
 
 	1.Point in time image copy.
-	2.stored in S3.
+	2.stored in S3 bucket, this customized ,not accessible.
 	3.1st time snapshot taking more time,incremtal snapshot taking less time.
 	4.per account 5000EBS can be created.
 	5.per account 10000Snapshot can be taken.
@@ -74,7 +74,7 @@ SnapShots:
 	8.Any AZ in region can use snapshots to create EBS volume.
 	9.to Migrate an EBS from one AZ to another,create a snapshot(region Specific) and Create an EBS volume from the snapshot in the specific AZ.
 	10.you can create a snapshot to a EBS volume same on larger size than the original volume size from which the snapshot was initially created.
-	11.yu can take snapshot of non-boot/not-root volume while the volume is in Running,it means we can still access while taking snapshot.
+	11.you can take snapshot of non-boot/not-root volume while the volume is in Running,it means we can still access while taking snapshot.
 	12.SnapShots are created immediately but it may stay in Pending staus,untill full snapshot completed,may take few hours for first-time.
 	13.only Non-boot volume can be acessed while taking snapshots.
 	14.To take complete snapshot you have to stop root volume.(applicable for EBS)
