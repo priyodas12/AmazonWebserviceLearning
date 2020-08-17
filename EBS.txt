@@ -100,7 +100,25 @@ EBS Encryption:
 	
 	5.directly encryption of root volume cant be done.
 	
-	6.
+Root Volume Encryption:
+	
+	1.There is ot direct way to chnage the encryption state of a volume.
+	
+	2.there is an idirect workarround to this.
+	
+	3.Lunch th instance with the EBS vloume.
+	
+	4.Do wahtever pacting or intall the EBS volume.
+	
+	5.create an AMI from the insatnce.
+	
+	6.copy the AMI and choose encryption while copying.
+	
+	7.this result as encrypted AMI that is private.
+	
+	8.use the encrypted AMI to lunch new EC2 instance which will have the EBS root volume encrypted.
+	
+	
 
 
 
