@@ -90,7 +90,13 @@ Incremental SnapShots:(to overcome snapshot size)
 	
 EBS Encryption:
 	
-	1.
+	1.EBS encryption is supported for all type of EC2.
+	
+	2.Snapshots of encrypted volume will always be encrypted.
+	
+	3.Data encryption at rest.
+	
+	4.
 
 
 
