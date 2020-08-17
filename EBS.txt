@@ -96,7 +96,11 @@ EBS Encryption:
 	
 	3.Data encryption at rest.
 	
-	4.
+	4.while doing encryption it first done on ec2 instance,then transfered.
+	
+	5.directly encryption of root volume cant be done.
+	
+	6.
 
 
 
