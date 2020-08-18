@@ -43,7 +43,7 @@ WCU and RCU:
 	ProvisonedThroughputException.
 	
 WCU:(per second always)
-	one write capacity unit represents one write per second for an iteam up to 1KB.
+	one write capacity unit represents one write per second for an item up to 1KB.
 	
 	example:
 		A.
@@ -72,7 +72,7 @@ RCU:
 		  
 	example:
 		A.
-		10 stringly consistant reads per seconds of 4KB each;
+		10 strongly consistant reads per seconds of 4KB each;
 		
 		we need 10*4/4=10RCU
 		
