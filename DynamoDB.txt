@@ -12,6 +12,7 @@ DynamoDB:
 	5.Integrated with IAM for security,authorization and admin activity.
 	
 Basic of DynamoDB:
+
 	1.made of tables
 	2.each table has primary key.
 	3.can infinte number or items/rows.
@@ -24,6 +25,7 @@ Basic of DynamoDB:
 	7.item greater than 400 KB should be placed in S3 bucket and pointed bucket data into item.
 		
 Primary keys:
+
 	1A.partition key(Hash):
 	2A.parimary key-->attributes.
 	
@@ -32,6 +34,7 @@ Primary keys:
 	
 	
 WCU and RCU:
+
 	1.Read capacity Unit(throughput for read)
 	2.Write capaccity Unit(throughput for writes)
 	3.Option to set up auto-scaling of throughput to meet demand.
