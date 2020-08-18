@@ -15,7 +15,7 @@ NOSQL:
 	
 Type of NoSQL:
 	1.Columnar Database(HBase,Cassendra)
-	2.DOcument Database(MongoDB,COuchDB)
+	2.Document Database(MongoDB,COuchDB)
 	3.Key-Value Database(Redis,DynamoDB)
 	4.GraphBase Database(Neo4J,FloackDB)
 	
@@ -67,6 +67,7 @@ DB Instance Size:
 			1500MBPS
 	
 Multiple Availability Zone Criteria:
+
 	1.You can select Multi AZ option when you lunch RDS.(Multi AZ cannot be decided by user).
 	2.RDS creates Stand by in different AZ and in same region with synchronous update.
 	primary to stand by update will be synchronous.
@@ -76,6 +77,7 @@ Multiple Availability Zone Criteria:
 	6.AWS recomended for provisioned IOPS for multiple AZ.
 	
 FailOver cases:
+
 	1.primary database fails
 	2.in case of AZ failure.
 	3.Netwrok connectivity issue with primary.
@@ -86,12 +88,14 @@ FailOver cases:
 	8.Manual failover.(reboot)
 	
 Multi AZ RDS failover procedure:
+
 	1.During Failover the CNAME of the RDS DB instances is updated to map with secondary IP address.
 	2.RDS endpoint does not change by Selecting Multi AZ option,However the primary and stand by instances will have different IP address,as they are in different AZ.
 	3.Its not recomended that you do not use IP address for RDS.
 	4.Reboot with Failover option should be seleccted for manual failver.
 	
 Snapshots and Back ups:
+
 	1.whenever failover occures AWS sends 
 	SNS notification(chargable)
 	2.You can use API call to findout the RDS eevnts occured in last 14 days.
