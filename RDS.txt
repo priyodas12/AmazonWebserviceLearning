@@ -110,12 +110,14 @@ Snapshots and Back ups:
 	6.In Multi AZ snapshots and automated back ups are done on Stand by instance to avoid IO susspension.(5 mins delay)
 	
 RDS multi AZ Deployment:
+
 	1.do first on stand by.
 	2.convert stand by to primary.
 	3.You can manually upgrade to DB instance
 	RDS->DB instance->modify DB->Set DB Engine version on maintainance window.
 	
 RDS Backups:
+
 	1.AWS RDS automated back ups
 	2.User insitiated Manual back ups.
 	3.either you can take ups for EC2 and DB instances or both.
