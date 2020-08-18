@@ -132,6 +132,7 @@ RDS Backups:
 	
 
 RDS Backup process:
+
 	1.In case of manual snapshot part in time recovery is not possible,for automated snapshot it will be taken 5 mins before.
 	2.Manual Snapshot will be stored in S3.
 	3.Manual snapshot will not be deleted automatically,once you delete RDS Instance from which snapshot taken.
@@ -141,6 +142,7 @@ RDS Backup process:
 	7.Instance end poit will be changed.
 	
 RDS Encryption:
+
 	1.Encryption will be done time of creation.
 	2.Once encrypted will not be undone,no runtime change.
 	3.RDS supports Encryption at Rest for all DB Engines using KMS.
