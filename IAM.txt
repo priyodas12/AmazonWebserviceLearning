@@ -20,7 +20,7 @@ IAM:
 	
 1.Shared access to AWS Accout:
 
-	you can grant other people permissio to admin and use resources in yout AWS account without having to share your access credentials.
+	you can grant other people permission to admin and use resources in yout AWS account without having to share your access credentials.
 
 2.Granular Permission:
 	
