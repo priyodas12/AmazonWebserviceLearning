@@ -1,11 +1,11 @@
 IAM:
 	Identity Access Management is a webservice that helps us securely control access to aws resources.using IAM ,AWS controls authentication and authorization to use resources.
 	
-	when you first create an AWS account ,root account with singl sign on identity that has completely access to all AWS services and resourcs.
+	when you first create an AWS account ,root account with single sign on identity that has completely access to all AWS services and resourcs.
 	
 	AWS recomends that you do not use root user for everyday task,even the admin tasks.
 	
-	IAM user limit is 500 for AWS account,you can add upto 10 users at a time.
+	IAM user limit is 5000 for AWS account,you can add upto 10 users at a time.
 	
 	You are also limited to 300 groups per AWS account.
 	

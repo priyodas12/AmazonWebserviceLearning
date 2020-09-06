@@ -70,13 +70,16 @@ Copying S3 Bucket:
 	
 S3 Storage:
 	1.S3 Standard(3 cpy in another AZ)
+	
 		A.High durability,Availability daily accessible data.
 		B.99.9999999999% Durable
 		C.99.99% available
 		D.SSL Data encryption be done in flight or rest both.
 		E.Storage charge high ,access charge low.
 		F.Single max PUT 5GB.
+		
 	2.S3 Glacier Deep Archive:(cheapest)
+	
 		A.to archive with low cost,securly,durable max retrieval time 12 hrs
 		B.Magnetic type of library.
 		C.99.9999999999% Durable
@@ -92,18 +95,23 @@ S3 Storage:
 		F.Data Deleted from S3 1A within 30 days will be charged 30 days full.
 		
 	4.S3 Standard IA One Zone
+	
 		A.Same like S3 Standard IA but data stored in one AZ.
 		B.99.9999999999% Durable
 		C.99.5% available
 		D.AWS will not pay any while any type of destruction.
+	
 	5.S3 Glacier
+	
 		A.to archive with low cost,securly,durable
 		B.99.9999999999% Durable
 		C.three retrival option available from min to hrs.
 		D.SSL Data encryption be done in flight or rest both.
 		E.Multiple copies will be saved in Different AZ.
 		F.10GB/month data can be retrive in free tier.
+		
 	6.S3 Intelligent Tiering(3 cpy in another AZ)-data will be moved in between S3 Std(for frequent) & S3 IA(non frequent)
+	
 		A.designed to optimize cost by automatically moving data to the most cost effective Access-tier.
 		B.It Works by storing objects in two tiers
 		C.If an Object in the infrequest access tier is accessed,that will moved back to frequent access tier.
@@ -111,6 +119,7 @@ S3 Storage:
 		E.Object less than 128KB will not be moved to IA.
 		F.99.9999999999% Durable
 		G.99.9% available
+		
 	7.Amazon S3 Reduced Redundancy Storage
 	
 		Reduced Redundancy Storage (RRS) is an Amazon S3 storage option that enables customers to store noncritical,
@@ -132,6 +141,7 @@ AWS uploaded image url:
 	
 	
 AWS S3 CLI:
+
 	1.download AWS CLI
 	2.create new key/secret
 	3.aws configure
