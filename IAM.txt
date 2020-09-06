@@ -42,9 +42,12 @@ IAM:
 	
 6.Identity information for Assurance:
 
-	using cloudtrail you canmonitor logs.
+	using cloudtrail you can monitor logs.
 	
 7.PCI DSS compliance:
+	
+	Payment Card Industries
+	Data Security Standard
 	
 	payment gateway complient for payment card for security.
 	
