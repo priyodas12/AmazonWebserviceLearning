@@ -1,4 +1,5 @@
 Route53:(DNS works on TCP port:53)
+
 	1.DNS server>>domain name to IP address conversion.
 	2.New domain name registry.
 	3.Transfer existing domain, from 3rd party to AWS.
@@ -10,10 +11,12 @@ Route53:(DNS works on TCP port:53)
 	D.Domain Registration.
 	
 How DNS WORKS:
+
 	Request-->DNS resolver-->Root Server(like .com server location)-->Name Servers-->
 	IP address sent to User Machine-->User machine will connect that respective IP
 	
 AWS top level domain:
+
 	1.Generic level domain:.com,.net,.org
 	2.Geographical level domain: .in, .us
 	
