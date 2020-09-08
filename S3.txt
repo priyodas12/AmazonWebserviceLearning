@@ -21,6 +21,7 @@ Object Level Storage-> can be access by Internet;
 	
 
 Simple Storage Service:
+
 	1.Region Specific storage service accesible by HTTP and HTTPS
 	2.Object based storage.(as it is will be stored)
 	3.for OS installation S3 cannot be used.
@@ -69,6 +70,7 @@ Copying S3 Bucket:
 	2.Multi part upload API.
 	
 S3 Storage:
+
 	1.S3 Standard(3 cpy in another AZ)
 	
 		A.High durability,Availability daily accessible data.
@@ -87,6 +89,7 @@ S3 Storage:
 		E.75% less cose than Glacier
 		
 	3.S3 Standard IA(3 cpy in another AZ)
+	
 		A.Less Frequent Access ,but Rapid access.
 		B.99.9999999999% Durable
 		C.Storage cost cheaper(half of S3) but Access cost high.
