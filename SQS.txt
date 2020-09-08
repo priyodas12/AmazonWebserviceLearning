@@ -21,7 +21,7 @@ Types of Queue:
 		
 Pricing:
 	Std Queue Price:0.4$/Million
-	FIFO Queue Price:0.5/Millions
+	FIFO Queue Price:0.5$/Millions
 	
 Billing Criteria:
 	1.API action.
@@ -33,8 +33,9 @@ Billing Criteria:
 	7.Interaction with AWS KMS.
 
 Short Polling:
-	1.It does not wait formessage to appear in the Queue.
+	1.It does not wait for message to appear in the Queue.
 	RecieveMessageWaitTime:0
+	
 Long Polling:
 	1.ReceiveMessageWaitTime:20<MAX>
 

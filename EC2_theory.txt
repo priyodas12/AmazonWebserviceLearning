@@ -19,7 +19,7 @@ General Purpose Instances:
 		testing code 
 		web server.
 		
-Ccompute Optimized:
+Compute Optimized:
 	1.Compute bound/intensive Application.
 	2.cost effective for compute.
 		C-Series:
@@ -96,7 +96,7 @@ EC2 Status Check:
 	2. Inbuilt facility.
 	3. By cloudwatch default time 5min,less than this can be charged.
 	4. Stop instance can not be chargable but assocaited EBS will be chargable.
-	5.When an EC2 instance is launched, AWS checks whether that ec2 is able to connect to the network or not. It does so in two steps.
+	5. When an EC2 instance is launched, AWS checks whether that ec2 is able to connect to the network or not. It does so in two steps.
 
 	Step 1: System check, this checks for proper hardware configuration of the instance at host level. It should be noted that you can not check these. These are aws managed. The best you can do is just stop and start the Instance in case system checks fail. It simply deallocates the previous VM and a new VM on different hardware is provisioned. If you want to retain public IP and other related stuff, you can configure Auto Recovery of instance from cloudwatch console.
 
@@ -114,7 +114,8 @@ When you Stop an EBS based EC2 Instance:(Intance storage directly attached with 
 	
 	
 When you terminate Instance:
-	1.EBS root volume will be deleted by default.(can be chnaged Delete On Termination)
+
+	1.EBS root volume will be deleted by default.(can be changed Delete On Termination)
 	2.additioncal volume will be remain
 	3.Once instance terminated it will be shown in console upto 1 hr.
 	4.EC2 Tarmination Protection should be enabled for any accidental termination.
