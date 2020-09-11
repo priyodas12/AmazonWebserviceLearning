@@ -91,7 +91,7 @@ EC2 Purchase Option:
 	6.Schedule(prepaid)
 		a. for particular timestamp or day.
 		b. once allocated bill will be generated.
-		
+		 
 	7.Bare Metal
 		a.direct access for hardware and ownership also.
 		b.I3 Metal,R5 Metal,Z1dMetal
@@ -118,6 +118,7 @@ EC2 Status Check:
 	
 When you Stop an EBS based EC2 Instance:(Intance storage directly attached with Server inside)
 	(Root volume will be on EBS)
+	
 	1.Instances perform Shut down.
 	2.State Running->Stop
 	3.EBS volume remains attached to instances.
