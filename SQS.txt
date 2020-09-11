@@ -1,4 +1,5 @@
 Simple Queue Service:
+
 	1.fast,reilableand fully managed web service.(Pull Service)
 	2.this web service will give access a queue and in that message to be processed.
 	3.It decouples apllications,such that a failure in one component will pick the task.
@@ -8,22 +9,28 @@ Simple Queue Service:
 	7.Autoscaling of EC2 can be done while messaage in queue increases.
 	
 Types of Queue:
+
 	1.Standard Queue:
+	
 		A.High Throughput(Unlimited)
 		B.At least One delivary
 		C.Duplicacy is possible
 		D.Best Effort Ordering.
+		
 	2.FIFO Queue:
+	
 		A.Limited Throughput(300TPS)
 		B.Exactly One Procesing
 		C.Duplicacy Not Possible
 		D.300 Transaction oer seconds.
 		
 Pricing:
+
 	Std Queue Price:0.4$/Million
 	FIFO Queue Price:0.5$/Millions
 	
 Billing Criteria:
+
 	1.API action.
 	2.FIFO request
 	3.Content of Request.
@@ -33,18 +40,22 @@ Billing Criteria:
 	7.Interaction with AWS KMS.
 
 Short Polling:
+
 	1.It does not wait for message to appear in the Queue.
 	RecieveMessageWaitTime:0
 	
 Long Polling:
+
 	1.ReceiveMessageWaitTime:20<MAX>
 
 SQS Retention Period:
+
 	1.Min 1min, default 4 day,max 14 days.
 	2.message can be read and sent be out also.
 	3.can be used with DynamoDB,EC2,ECS,Redshift,RDS,Lambda,S3
 	
 Visibility Timeout:
+
 	1.max 12 hrs,default 30 sec.
 	2.working server can extend visibility time out.
 	3.if porcess fails again visibility time out will be shown.

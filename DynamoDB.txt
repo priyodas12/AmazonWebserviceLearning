@@ -1,10 +1,12 @@
 NOSQL Databases:
+
 	1.non-relational databases and distributed.
 	2.does not support join.(join should be done client side)
 	3.does not perform aggregation.
 	4.scales horizontally.
 	
 DynamoDB:
+
 	1.fully managed,highly available,3 AZ replication.
 	2.scales massive workloads,distributed database.
 	3.Millions of requests per seconds,100s TB of storage.

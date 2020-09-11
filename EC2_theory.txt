@@ -63,8 +63,18 @@ EC2 Purchase Option:
 	2.Dedicated Instance
 		a.set of virtuaized  dedicated ec2(not for other type) to a particular user.
 	3.Dedicated Host
-		a.dedicated physical server for software compliance.
+		a.dedicated physical server for single organization for software compliance.
 		b.cannot be migrated.
+		c.ZEN hypervisor used.
+		
+	“An important difference between a Dedicated Host and a Dedicated Instance is that a Dedicated Host gives you additional visibility and control over how instances are placed on a physical server, and you can consistently deploy your instances to the same physical server over time.Price of Dedicated Instance is higer than dedicated host”
+	
+	
+
+	Dedicated instances ensure all of your instances run on single tenant hardware.
+
+	Dedicated hosts allow you more control on where your dedicated instances run. It's primarily to make "bring your own license" and compliance easier.
+	
 	4.Spot
 		a.cheapest
 		b.bid done from aws for idle instances any type
