@@ -54,7 +54,7 @@ Memory Optimized Instance:
 			
 
 EC2 Purchase Option:
-	1.On demand:(when you dont know the timing of running)
+	1.On demand:(when you dont know the timing of running)(postpaid)
 		a.AWS & AWS RDS
 		b.Short term workload recomended.
 		c.Testing and Dev work.
@@ -75,19 +75,23 @@ EC2 Purchase Option:
 
 	Dedicated hosts allow you more control on where your dedicated instances run. It's primarily to make "bring your own license" and compliance easier.
 	
-	4.Spot
+	4.Spot(prepaid)
 		a.cheapest
 		b.bid done from aws for idle instances any type
 		c.testing only
 		d.2 mins of warning time for data saving before being stopped.
-	5.Reserved
+		
+	5.Reserved(Prepaid)
 		a.for whole year reserved.(1-3 year,advanced payment required).
 		b.75% chepaer according to on demand instances.
 		c.database instances.
 		d.Scheduled RI,Standard RI,Convertible RI(upto 54% cheaper).
-	6.Schedule
+		e.cant be moved to another region.
+		
+	6.Schedule(prepaid)
 		a. for particular timestamp or day.
 		b. once allocated bill will be generated.
+		
 	7.Bare Metal
 		a.direct access for hardware and ownership also.
 		b.I3 Metal,R5 Metal,Z1dMetal
