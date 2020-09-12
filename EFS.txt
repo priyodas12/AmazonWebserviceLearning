@@ -1,0 +1,9 @@
+Elastic File Storage:
+	1.Scalable file storage for use with EC2.
+	2.Can be used as common data source for workloads and applications running on multiple instances.
+	3.No need to pre provision,grows/shrinks automatically as per usage.
+	4.EFS is a regional service storing data within and accross multiple availability zone.
+	5.ec2 instances can access your file system accross AZs,regions and VPCs.
+	6.you can also mount yur file system from on premises server over aws direct connect or aws vpn connection.
+	7.NFSv4 protocol is used to access to EFS.
+	8.Cant be connected with windows instances.
