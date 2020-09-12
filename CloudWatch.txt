@@ -14,16 +14,24 @@ Monitoring Aspects:
 		D.Dimension is an attribute of a metric(instance id,environment,etc)
 		E.up to 10 dimension per metric.
 		F.Metrics have timestamps.
-		G.Can create Cloudwatc dashboards of metrics.	
+		G.Can create Cloudwatc dashboards of metrics.
+		
 	2.Logs: collect ,monitor,analyze and store log files
-	3.Events: Send notification when certain events happen in your aws.
-	4.Alarms: React in real to metric/events.
 	
-AWS Cloudtrail:
-
-	1.Internal monitoring of API calls being made.
-	2.Audit changes to AWS Resources bu users.
-
+	3.Events: Send notification when certain events happen in your aws.
+	
+	4.Alarms: 
+	React in real to metric/events.
+	
+	A.Alarms are used to trigger notifications for any matrices
+	B.Alarms can go to auto scaling group,EC2 Actions ,SNS notifications.
+	C.various options(smapling % min,max)
+	D.Alarms state:
+		OK
+		INSUFFIENT_DATA
+		ALARM
+	
+	
 Cloudwatch Metrics:
 
 	1.Metric is vriable to monitor.
@@ -91,6 +99,12 @@ EC2 Detail MOnitoring:
 	1.by default in 5 minutes 
 	2.can be optimize upto 1 minute.
 	3.API call PutMetricData.
+	
+	
+AWS Cloudtrail:
+
+	1.Internal monitoring of API calls being made.
+	2.Audit changes to AWS Resources bu users.
 	
 	
 	
