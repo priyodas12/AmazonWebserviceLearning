@@ -7,7 +7,14 @@ CloudWatch:(Monitoring Tool)
 	
 Monitoring Aspects:
 
-	1.Metrics:collect and tarch key matrices
+	1.Metrics:
+		A.collect and trace  key matrices
+		B.Metric is a variable to monitor(CPUUtilization,NetworkIN etc)
+		C.metrics belongs to namespaces.
+		D.Dimension is an attribute of a metric(instance id,environment,etc)
+		E.up to 10 dimension per metric.
+		F.Metrics have timestamps.
+		G.Can create Cloudwatc dashboards of metrics.	
 	2.Logs: collect ,monitor,analyze and store log files
 	3.Events: Send notification when certain events happen in your aws.
 	4.Alarms: React in real to metric/events.
