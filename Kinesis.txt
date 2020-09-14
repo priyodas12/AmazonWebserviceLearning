@@ -1,0 +1,15 @@
+Kinesis Overview:
+
+1.managed alternative to apache kafka.
+2.great for application logs,metrics,IOT,clickStream
+3.applicable for real-time big data.
+4.great for streaming processing frameworks.
+(spark,NiFi etc)
+5.data automatically replicated to 3AZ.
+
+Kinesis Stream: low latency streaming ingest at scale.
+
+Kinesis Analytics: perform real time analytics on stream using SQL.
+
+Kinesis Firehouse: load stream into S3,RedShift,ElasticSearch..
+
