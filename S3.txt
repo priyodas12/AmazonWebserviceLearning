@@ -61,8 +61,8 @@ https://s3-eu-west1.amazonaws.com/mybucket
 	
 S3 Multipart Upload:
 
-	1.100MB max,parallel process.
-	2.>5GB file always multi part upload.
+	1.100MB max,concurrent process.(recomended)
+	2.>5GB file always multi part upload.(must)
 	3.min size minimum of 0 bytes,max 5TB
 	
 Copying S3 Bucket:
