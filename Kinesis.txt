@@ -7,7 +7,14 @@ Kinesis Overview:
 (spark,NiFi etc)
 5.data automatically replicated to 3AZ.
 
+click stream--->
+IOT stream----->AMAZON KINESIS STREAM-->AMAZON KINESIS ANALYTICS-->AMAZON KINESIS FIREHOUSE--->Storage(S3,RedShift)
+Metric stream-->
+
 Kinesis Stream: low latency streaming ingest at scale.
+
+	1.One stream= set of different shards
+	2.1MB/s or 1000 messages/s at write Per shards(Producer side)
 
 Kinesis Analytics: perform real time analytics on stream using SQL.
 
