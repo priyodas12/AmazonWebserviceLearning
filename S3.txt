@@ -56,7 +56,7 @@ S3 Versioning:
 	7.MFA s3 delete can be enabled.
 	
 S3 Bucket Name convention:
-https://<region-name>.amazonaws.com/bucketName
+https://<s3-region-name>.amazonaws.com/bucketName
 https://s3-eu-west1.amazonaws.com/mybucket
 	
 S3 Multipart Upload:
