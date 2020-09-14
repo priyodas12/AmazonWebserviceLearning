@@ -44,7 +44,7 @@ S3 Bucket Naming Convention:
 Lifecycle Management:S3---after 30 days->S3-IA---after 30 days--->Glacier
 	1.maintain cheaper data.
 	
-Satic Website hoisting:
+Static Website hoisting:
 
 S3 Versioning:
 	1.Accidental data delete or update.
