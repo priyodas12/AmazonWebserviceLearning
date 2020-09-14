@@ -163,5 +163,7 @@ S3 FAQ:
 
 
 1.Can the string value of ‘Key’ be prefixed with :aws:”? NO
+2.S3 Standard-IA and S3 One Zone-IA storage have a minimum billable object size of 128KB. Smaller objects may be stored but will be charged for 128KB of storage at the appropriate storage class rate
+3.AWS S3 limits the size of user-defined metadata within each PUT request header to 2 KB. StorageGRID limits user metadata to 24 KiB. The size of user-defined metadata is measured by taking the sum of the number of bytes in the UTF-8 encoding of each key and value.
 	
 	
