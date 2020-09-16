@@ -70,7 +70,11 @@ Default response timeout is 5 sec(2 to 60 sec);
 
 default ping interval is default 30 sec(5 to 300 sec).
 
-to be declared an ec2 instance unhealthy is 2(default)
+to be declared an ec2 instance unhealthy is 2(default).
+
+even  though its giving 200 response after 2 ping but ELB will still ping upto 10 times anf even then its successfull then it will be considered as healthy 
+
+
 
 
 
