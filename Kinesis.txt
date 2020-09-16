@@ -16,6 +16,7 @@ Kinesis Stream: low latency streaming ingest at scale.
 	1.One stream= set of different shards
 	2.1MB/s or 1000 messages/s at write Per shards(Producer side)
 	3.2MB/s or 2000 messages/s per shards at read side (Consumer side).
+	4.Records are ordered per shards
 
 Kinesis Analytics: perform real time analytics on stream using SQL.
 

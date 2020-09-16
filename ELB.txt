@@ -1,0 +1,5 @@
+Elastic Load Balancer(ELB):
+
+	Load balancer distributess loads into te web traffic to the available server.
+	
+	Load balancing refers to efficient distribution incoming traffic to back end server.
