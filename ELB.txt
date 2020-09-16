@@ -3,3 +3,25 @@ Elastic Load Balancer(ELB):
 	Load balancer distributess loads into te web traffic to the available server.
 	
 	Load balancing refers to efficient distribution incoming traffic to back end server.
+	
+ELB:
+
+	1.Application Load Balancer:
+	7th layer(application layer)
+	
+	HTTP/HTTPS/RDP
+	
+	2.Network Load Balancer:static website
+	4th layer(network layer)
+	
+	TCP/TLS/UDP
+	
+	3.Classic Load Balancer:
+	Previous Generation worked on both 4th and 7th layer.
+	
+	HTTPS/HTTP/TCP/SSL
+	
+ELB Architechture:
+
+	
+	
