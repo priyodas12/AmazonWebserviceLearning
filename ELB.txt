@@ -4,6 +4,8 @@ Elastic Load Balancer(ELB):
 	
 	Load balancing refers to efficient distribution incoming traffic to back end server.
 	
+	ELB has nothing to do with outbound traffic.
+	
 ELB:
 
 	1.Application Load Balancer:
@@ -35,6 +37,8 @@ ELB Architechture:
 	
 	Frontend listener will check internet facing traffic.
 	
+	Backend listener configured with protocol port to check for traffic from the ELB to the EC2 instance.
+	
 	2.Target Group:set of server for a particular traffic;
 	
 	3.Target:End server or EC2 Instance or lambda or static IP(not publis IP);
@@ -44,6 +48,14 @@ ELB Architechture:
 	100.64.0.0/10
 	172.16.0.0/12
 	192.168.0.0/16
+	
+Once you delete ELB before that you should configure Route53 to notify EC2 for desired traffic route.EC2 attached with ELB will not be deleted once ELB deleted.
+
+ELB always send s traffic to default"eth0" additional ENI (eth1,eth2) can be created.
+
+
+
+
 	
 	
 
