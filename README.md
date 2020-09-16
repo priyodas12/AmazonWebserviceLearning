@@ -1,3 +1,3 @@
 # Amazon Webservice Learning
 
-### EC2,EBS,S3,VPC,RDS,IAM,CICD,CloudWatch,Beanstalk,CloudFormation,SNS,SQS,Lambda,X-Ray,Cloudtrail,ECS
+### EC2,EBS,ELB,S3,VPC,RDS,DynamoDB,IAM,CICD,CloudWatch,Beanstalk,CloudFormation,SNS,SQS,Lambda,X-Ray,Cloudtrail,ECS,Cloudfront,Route53,Kinesis
