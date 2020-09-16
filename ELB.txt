@@ -53,6 +53,25 @@ Once you delete ELB before that you should configure Route53 to notify EC2 for d
 
 ELB always send s traffic to default"eth0" additional ENI (eth1,eth2) can be created.
 
+ELB supports only IPV4 address traffic inside VPC.
+
+The load balancer also monitors the health of its registered instance and ensures that it route traffic only ot the healthy instances.
+
+A halthy instance shows as Healthy under ELB
+with the ELB detects Unhealthy instance it stops routing traffic to that instance.
+
+By default AWS console uses ping HTTP (port 80) for health check.
+
+registered instances must respond with the time out period else it will be considered as unhealthy.
+
+AWS API uses TCP(port 80) for health check.
+
+Default response timeout is 5 sec;
+
+
+
+
+
 
 
 
