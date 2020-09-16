@@ -23,5 +23,16 @@ ELB:
 	
 ELB Architechture:
 
+	client-->load balancer DNS-->server IP-->access server
 	
+	
+	Its not mandatorty to all trafiic will goes through Load balancer.
+	
+	ping command will work thotugh ICMP protocol.
+	
+	1.Listener:decides trafiic will go which particular port(80 or 443 or 3389);
+	
+	2.Target Group:set of server for a particular traffic;
+	
+	3.Target:
 	
