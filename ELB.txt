@@ -30,9 +30,25 @@ ELB Architechture:
 	
 	ping command will work thotugh ICMP protocol.
 	
-	1.Listener:decides trafiic will go which particular port(80 or 443 or 3389);
+	1.Listener:
+	decides trafiic will go which particular port(80 or 443 or 3389);
+	
+	Frontend listener will check internet facing traffic.
 	
 	2.Target Group:set of server for a particular traffic;
 	
-	3.Target:
+	3.Target:End server or EC2 Instance or lambda or static IP(not publis IP);
+	
+	below are the specific IPs
+	10.0.0.0/8
+	100.64.0.0/10
+	172.16.0.0/12
+	192.168.0.0/16
+	
+	
+
+
+	
+	
+
 	
