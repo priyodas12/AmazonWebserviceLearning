@@ -57,6 +57,5 @@ Lunch Configuration:
 AutoScaling Group:
 Scaling Policy:
 
-6ZTG@;FMblpR%TTrscBIOzsU)Y?L2SsO
 	
 	
