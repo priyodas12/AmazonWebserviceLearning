@@ -1,0 +1,38 @@
+AWS CodeCommit:
+
+
+Steps to push code in AWS CodeCommit:
+
+1.Create seperate IAM user having group contains role as full CodeCommit Access;
+
+2.Get the programatic access key and secret for the IAM user.
+
+3.Create a repository same as local code base repo name.
+
+4.Local code base initalizaion:open git bash:
+	
+	1.Master Branch
+
+		A. git init
+		
+		B. git add <file_name> or .(for all file)
+		
+		C. git commit -m "<commit message>"
+		
+		D. git remote add origin <cloned repository url>
+		
+		E. git push origin master or <branch name>
+	
+	2.additional Branch
+	
+		F. git checkout -b <test_branch>, do the changes in this branch and commit
+		
+		G. git checkout master
+		
+		H. git merge <test_branch>
+		
+		I. git push origin master
+
+5.Go to AWS console and check the commit logs at Repositories/Commits(commit id,commit timestamp,commit message,author)
+
+6.Also we can create SNS topic for commit events.
