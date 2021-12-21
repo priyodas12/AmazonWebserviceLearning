@@ -25,7 +25,7 @@ Simple Storage Service:
 	1.Region Specific storage service accesible by HTTP and HTTPS
 	2.Object based storage.(as it is will be stored)
 	3.for OS installation S3 cannot be used.
-	4.Three copis will be maintained for S3 object.
+	4.Three copy will be maintained for S3 object.
 	5.Data stored in bucket(kind of folder
 	and flat container i.e. under bucket there should not be another bucket).
 	6.Max Bucket capacity 5TB.No limitations upto 100 Buckets/account.
@@ -33,13 +33,17 @@ Simple Storage Service:
 	
 S3 Bucket Naming Convention:
 	1.globally unique name.
-	2.Bucket name cannot be changed once created.
-	3.3 to 63 character should contain in bucket name.
+	2.Bucket name cannot be changed once created,must start with letter or number.
+	3.No Uppercase,no underscore,3 to 63 character should contain in bucket name.
 	4.Service-end-point,bucketname,object name,version name.
 	5.bucket name are part of URL
 	6.space must be avoided,should use . in between name.
 	7.Bucket name should not be an IP address.
 	8.By default bucket object will be private,only owner can access.
+	9.buckets are defined at region.
+	10.Objects(files) have a key,key is the full path.
+		s3://my-bucket/{my_file.txt}-->key
+		s3://my-bucket/{folder1/folder2/myfile.txt}-->key
 	
 Lifecycle Management:S3---after 30 days->S3-IA---after 30 days--->Glacier
 	1.maintain cheaper data.
