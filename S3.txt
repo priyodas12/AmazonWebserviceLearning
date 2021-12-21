@@ -1,27 +1,27 @@
 Storage:
-
+-------
 1.Simple storage Service(unstructured data,object type)
 2.Elastic File System(Common file system storage-updated,patch file,for linux based)
 3.Elastic Block Storage.(EC2 attach,block level storage)
 4.Glacier(durable,available and low latency data storage for archive)
 5.Snowball(portable storage for data migration)
 
-Block Level Storage->can only be accessed by EC2;
-
+Block Level Storage->can only be accessed by EC2:
+-------------------------------------------------
 	1.structured data,random read/write data.
 	2.block storage divides the data to be in evenly sized blocks for instance.
 	3.metadata cannot be stored.
 	4.only indexing data store to retrieve.
 	
-Object Level Storage-> can be access by Internet;
-
+Object Level Storage-> can be access by Internet:
+------------------------------------------------
 	1.whole object will be stored ata place not division.
 	2.metadata,object global unique id
-	3.dropbox,aws s3,
+	3.dropbox,aws s3
 	
 
 Simple Storage Service:
-
+----------------------
 	1.Region Specific storage service accesible by HTTP and HTTPS
 	2.Object based storage.(as it is will be stored)
 	3.for OS installation S3 cannot be used.
@@ -32,6 +32,7 @@ Simple Storage Service:
 	7.Can create under another folder in side Bucket by AWS console.
 	
 S3 Bucket Naming Convention:
+---------------------------
 	1.globally unique name.
 	2.Bucket name cannot be changed once created,must start with letter or number.
 	3.No Uppercase,no underscore,3 to 63 character should contain in bucket name.
@@ -41,16 +42,20 @@ S3 Bucket Naming Convention:
 	7.Bucket name should not be an IP address.
 	8.By default bucket object will be private,only owner can access.
 	9.buckets are defined at region.
-	10.Objects(files) have a key,key is the full path.
+	10.Objects(files) have a key,key is the full path.key is combination of prefix(folder) and file name.
 		s3://my-bucket/{my_file.txt}-->key
 		s3://my-bucket/{folder1/folder2/myfile.txt}-->key
 	
-Lifecycle Management:S3---after 30 days->S3-IA---after 30 days--->Glacier
+Lifecycle Management:
+---------------------
 	1.maintain cheaper data.
+	S3---after 30 days->S3-IA---after 30 days--->Glacier
 	
 Static Website hoisting:
+-----------------------
 
 S3 Versioning:
+-------------
 	1.Accidental data delete or update.
 	2.Data retention and archive.
 	3.versioning can not be deleted once enabled,only suspended.
@@ -60,21 +65,23 @@ S3 Versioning:
 	7.MFA s3 delete can be enabled.
 	
 S3 Bucket Name convention:
-https://<s3-region-name>.amazonaws.com/bucketName
-https://s3-eu-west1.amazonaws.com/mybucket
+--------------------------
+	https://<s3-region-name>.amazonaws.com/bucketName
+	https://s3-eu-west1.amazonaws.com/mybucket
 	
 S3 Multipart Upload:
-
+--------------------
 	1.100MB max,concurrent process.(recomended)
 	2.>5GB file always multi part upload.(must)
 	3.min size minimum of 0 bytes,max 5TB
 	
 Copying S3 Bucket:
+-----------------
 	1.back ups
 	2.Multi part upload API.
 	
 S3 Storage:
-
+----------
 	1.S3 Standard(3 cpy in another AZ)
 	
 		A.High durability,Availability daily accessible data.
@@ -156,7 +163,7 @@ AWS S3 CLI:
 	5.aws s3 ls
 	6.create bucket::aws s3 mb s3://bucket02-priyobrato19910707
 	7.See all object in bucket:aws s3 ls s3://bucket01-priyobrato19910606 --recursive
-	8.delete bucket::aws s3 rb s3://elasticbeanstalk-ap-south-1-063938404934 --force
+	8.delete bucket::aws s3 rb s3://elasticbeanstalk-ap-south-1-xxxxxxxxxxx --force
 	9.sync with any bucket::aws s3 sync . s3://bucket01-priyobrato19910606
 	10.delete from local folder and do sync::aws s3 sync s3://bucket01-priyobrato19910606 .
 	11.remove all file::aws s3 rm s3://bucket01-priyobrato19910606 --recursive
