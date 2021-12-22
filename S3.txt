@@ -54,9 +54,12 @@ Lifecycle Management:
 S3 Encryption:
 -------------
 	SSE-S3:Encrypts S3 objects using keys handeled and managed by aws.
+	Object encryption on server side,AES-256 Algoritham.must set header "x-amz-server-side-encryption":"AES256"
 	SSE-KMS: Leverages Aws key managment service to manage encryption keys.
-	SSE-C: When we want to manage your own encryption keys.
-	Client Side Encryption:
+	KMS advatages is user control+audit trail,Object encrypted in server side.must set header "x-amz-server-side-encryption":"aws:kms"
+	SSE-C: When we want to manage your own encryption keys fully managed by customer side.S3 does not store the keys.
+	Request header must have data key.
+	Client Side Encryption:Client must encrypt data before sending to s3 and decrypts data once fetched.
 
 S3 Versioning:
 -------------
