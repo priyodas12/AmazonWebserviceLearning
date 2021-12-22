@@ -51,8 +51,12 @@ Lifecycle Management:
 	1.maintain cheaper data.
 	S3---after 30 days->S3-IA---after 30 days--->Glacier
 	
-Static Website hoisting:
------------------------
+S3 Encryption:
+-------------
+	SSE-S3:Encrypts S3 objects using keys handeled and managed by aws.
+	SSE-KMS: Leverages Aws key managment service to manage encryption keys.
+	SSE-C: When we want to manage your own encryption keys.
+	Client Side Encryption:
 
 S3 Versioning:
 -------------
