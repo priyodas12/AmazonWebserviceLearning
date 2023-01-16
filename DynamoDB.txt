@@ -15,6 +15,8 @@ DynamoDB:
 	
 Basic of DynamoDB:
 
+In DynamoDB, tables, items, and attributes are the core components that you work with. A table is a collection of items, and each item is a collection of attributes. DynamoDB uses primary keys to uniquely identify each item in a table and secondary indexes to provide more querying flexibility. You can use DynamoDB Streams to capture data modification events in DynamoDB tables.
+
 	1.made of tables
 	2.each table has primary key.
 	3.can infinte number or items/rows.
@@ -37,6 +39,10 @@ Primary keys:
 	
 WCU and RCU:
 
+One read capacity unit(RCU) = one strongly consistent read per second, or two eventually consistent reads per second, for items up to 4 KB in size.
+
+Transactional read requests require two read capacity units to perform one read per second for items up to 4 KB.TransactGetItems is a synchronous read operation that groups up to 100 Get actions together. These actions can target up to 100 distinct items in one or more DynamoDB tables within the same AWS account and Region. The aggregate size of the items in the transaction can't exceed 4 MB.
+
 	1.Read capacity Unit(throughput for read)
 	2.Write capaccity Unit(throughput for writes)
 	3.Option to set up auto-scaling of throughput to meet demand.
@@ -44,8 +50,12 @@ WCU and RCU:
 	5.if brust credit are empty ,will throw 
 	ProvisonedThroughputException.
 	
-WCU:(per second always)
-	one write capacity unit represents one write per second for an item up to 1KB.
+WCU:(per second always):
+
+	One write capacity unit(WCU) = one write per second, for items up to 1 KB in size.
+
+
+	Transactional write requests require two write capacity units to perform one write per second for items up to 1 KB.TransactWriteItems is a synchronous and idempotent write operation that groups up to 100 write actions in a single all-or-nothing operation. These actions can target up to 100 distinct items in one or more DynamoDB tables within the same AWS account and in the same Region.
 	
 	example:
 		A.
