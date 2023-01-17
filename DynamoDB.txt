@@ -4,6 +4,18 @@ NOSQL Databases:
 	2.does not support join.(join should be done client side)
 	3.does not perform aggregation.
 	4.scales horizontally.
+
+Types of NoSQL Databases:
+
+	1.Key-value:(DynamoDb) Key-value databases are highly partitionable and allow horizontal scaling at scales that other types of databases cannot achieve. Use cases such as gaming, ad tech, and IoT lend themselves particularly well to the key-value data model.
+
+	2.Document:(Amazon DocumentDb) In application code, data is represented often as an object or JSON-like document because it is an efficient and intuitive data model for developers. Document databases make it easier for developers to store and query data in a database by using the same document model format that they use in their application code.
+
+	3.Graph:(Amzon Neptune) A graph database’s purpose is to make it easy to build and run applications that work with highly connected datasets. Typical use cases for a graph database include social networking, recommendation engines, fraud detection, and knowledge graphs.
+
+	4.In-memory:(AMazon Elasticache,DAX-DynamoDB Accelerator) Gaming and ad-tech applications have use cases such as leaderboards, session stores, and real-time analytics that require microsecond response times and can have large spikes in traffic coming at any time.
+
+	5.Search:(Amazon OpenSearch Service) Many applications output logs to help developers troubleshoot issues. Amazon OpenSearch Service is purpose-built for providing near-real-time visualizations and analytics of machine-generated data by indexing, aggregating, and searching semistructured logs and metrics.
 	
 DynamoDB:
 
@@ -12,6 +24,8 @@ DynamoDB:
 	3.Millions of requests per seconds,100s TB of storage.
 	4.Fast and consistant performance.
 	5.Integrated with IAM for security,authorization and admin activity.
+
+DynamoDB is a NoSQL database and is schemaless. This means that, other than the primary key attributes, you don't have to define any attributes or data types when you create tables. By comparison, relational databases require you to define the names and data types of each column when you create a table.
 	
 Basic of DynamoDB:
 
@@ -19,19 +33,27 @@ In DynamoDB, tables, items, and attributes are the core components that you work
 
 	1.made of tables
 	2.each table has primary key.
-	3.can infinte number or items/rows.
-	4.each item has attributes can be added over time-can be null.
+	3.can infinte number or items(rows).Each item is composed of one or more attributes(columns).
+	4.each item has attributes(column) can be added over time-can be null.
 	5.Maximum size of an item is 400KB.
 	6.Data type supported:
 		1.scaler type:Number,Binary,String
 		2.Document type: List,Map
 		3.Set types: String set,Binary Set.
 	7.item greater than 400 KB should be placed in S3 bucket and pointed bucket data into item.
+
+DynamoDB supports many different data types for attributes within a table. They can be categorized as follows:
+
+Scalar Types – A scalar type can represent exactly one value. The scalar types are number, string, binary, Boolean, and null.
+
+Document Types – A document type can represent a complex structure with nested attributes, such as you would find in a JSON document. The document types are list and map.
+
+Set Types – A set type can represent multiple scalar values. The set types are string set, number set, and binary set.
 		
 Primary keys:
 
 	1A.partition key(Hash):
-	2A.parimary key-->attributes.
+	2A.sort key-->attributes.
 	
 	1B.partition key+sort key
 	2B.user_id+game_id-->attributes
@@ -59,7 +81,7 @@ WCU:(per second always):
 	
 	example:
 		A.
-		we write 10objects per seconds of 2KB each.
+		we write 10 objects per seconds of 2KB each.
 		
 		we need 10*2=20WCU;
 		
@@ -67,21 +89,37 @@ WCU:(per second always):
 		we write 6 objects per second 4.5 KB each.
 		
 		we need 6*5=30 WCU;
-	
-RCU:
-	Eventual Consistent Read: 
-		if we read just after a write its possible we will get unexpected response beacuse of replication.
-	Strongly Consistant Read:
-		if we read just after a write and get the correct data.
+
+	Eventually Consistent Reads: if we read just after a write 
+
+	its possible we will get unexpected response beacuse of replication.
+	When you read data from a DynamoDB table, the response might not reflect the results of a recently completed write operation. The response might include some stale data. If you repeat your read request after a short time, the response should return the latest data.
+
+	Strongly Consistent Reads: if we read just after a write and get the correct data.
+
+	When you request a strongly consistent read, DynamoDB returns a response with the most up-to-date data, reflecting the updates from all prior write operations that were successful. However, this consistency comes with some disadvantages:
+
+		1. Strongly consistent reads are not supported on global secondary indexes.
+		2. If read requests do not reach the Leader node on the first attempt, then strongly consistent reads may experience a higher latency.
+		3. Strongly consistent reads use more throughput(the measure of the amount of data transferred from/to a storage device in a second.) capacity than eventually consistent reads. If there is a network delay or outage, a strongly consistent read might not be available and DynamoDB may return a server error (HTTP 500).
+
+	A transactional read request of an item up to 4 KB requires two read request units.
 	
 	By Deafult Dynamo DB uses eventually consistant read.
 	
-	1 RCU=1 Strongly Consistant Read/Sec 
+	1 RCU=1 Strongly Consistant Read/Sec(4KB/Sec)
+
 			or
-		  2 Evenetually Consistant Read/Sec
-		   
-		  upto 4 KB
-		  
+
+		  2 Evenetually Consistant Read/Sec(8KB/Sec)
+
+		  or
+
+		  1/2 Transactional Read Request/sec(2KB/Sec)
+
+
+	if your item size is 8 KB, you require 2 read request units to sustain one strongly consistent read, 1 read request unit if you choose eventually consistent reads, or 4 read request units for a transactional read request.
+
 	example:
 		A.
 		10 strongly consistant reads per seconds of 4KB each;
@@ -125,19 +163,199 @@ DynamoDB APIs:
 
 Amazon DynamoDB supports two types of secondary indexes:
 
-Global secondary index—An index with a partition key and a sort key that can be different from those on the base table. 
+Global secondary index(GSI)—An index with a partition key and a sort key that can be different from those on the base table.
+
 A global secondary index is considered "global" because queries on the index can span all of the data in the base table,
 across all partitions. A global secondary index has no size limitations and has its own provisioned throughput settings 
 for read and write activity that are separate from those of the table.
 
-Local secondary index—An index that has the same partition key as the base table, but a different sort key.
+Local secondary index(LSI)—An index that has the same partition key as the base table, but a different sort key.
+
 A local secondary index is "local" in the sense that every partition of a local secondary index is scoped to a base table partition 
 that has the same partition key value. As a result, the total size of indexed items for any one partition key 
 value can't exceed 10 GB. Also, a local secondary index shares provisioned throughput settings for read and write activity with the table it is indexing.
 
+DynamoDB ensures that the data in a secondary index is eventually consistent with its table. You can request strongly consistent Query or Scan actions on a table or a local secondary index. However, global secondary indexes support only eventual consistency.
+
+You can add a global secondary index to an existing table, using the UpdateTable action and specifying GlobalSecondaryIndexUpdates.
+
+{
+    TableName: "Music",
+    AttributeDefinitions:[
+        {AttributeName: "Genre", AttributeType: "S"},
+        {AttributeName: "Price", AttributeType: "N"}
+    ],
+    GlobalSecondaryIndexUpdates: [
+        {
+            Create: {
+                IndexName: "GenreAndPriceIndex",
+                KeySchema: [
+                    {AttributeName: "Genre", KeyType: "HASH"}, //Partition key
+                    {AttributeName: "Price", KeyType: "RANGE"}, //Sort key
+                ],
+                Projection: {
+                    "ProjectionType": "ALL"
+                },
+                ProvisionedThroughput: {                                // Only specified if using provisioned mode
+                    "ReadCapacityUnits": 1,"WriteCapacityUnits": 1
+                }
+            }
+        }
+    ]
+}
+
 Each table in DynamoDB can have up to 20 global secondary indexes (default quota) and 5 local secondary indexes.
 
+Read consistency:
 
+Amazon DynamoDB is available in multiple AWS Regions around the world. Each Region is independent and isolated from other AWS Regions. For example, if you have a table called People in the us-east-2 Region and another table named People in the us-west-2 Region, these are considered two entirely separate tables.
+
+CreateTable:
+-----------
+
+Use the CreateTable action to create a provisioned mode table, specifying parameters as shown following:
+
+{
+    TableName : "Music",
+    KeySchema: [
+        {
+            AttributeName: "Artist",
+            KeyType: "HASH", //Partition key
+        },
+        {
+            AttributeName: "SongTitle",
+            KeyType: "RANGE" //Sort key
+        }
+    ],
+    AttributeDefinitions: [
+        {
+            AttributeName: "Artist",
+            AttributeType: "S"
+        },
+        {
+            AttributeName: "SongTitle",
+            AttributeType: "S"
+        }
+    ],
+    ProvisionedThroughput: {       // Only specified if using provisioned mode
+        ReadCapacityUnits: 1,
+        WriteCapacityUnits: 1
+    }
+}
+
+DescribeTable:
+-------------
+
+DynamoDB has a DescribeTable action, which is similar. The only parameter is the table name:
+{
+    TableName : "Music"
+}
+
+PutItem:
+-------
+
+With the DynamoDB API, you use the PutItem operation to add an item to a table.
+
+{
+    TableName: "Music",
+    Item: {
+        "Artist":"No One You Know",
+        "SongTitle":"Call Me Today",
+        "AlbumTitle":"Somewhat Famous",
+        "Year": 2015,
+        "Price": 2.14,
+        "Genre": "Country",
+        "Tags": {
+            "Composers": [
+                  "Smith",
+                  "Jones",
+                  "Davis"
+            ],
+            "LengthInSeconds": 214
+        }
+    }
+}
+
+With PartiQL, you use the ExecuteStatement operation to add an item to a table, using the PartiQL Insert statement.
+
+INSERT into Music value {  
+    'Artist': 'No One You Know',
+    'SongTitle': 'Call Me Today',
+    'AlbumTitle': 'Somewhat Famous',
+    'Year' : '2015',
+    'Genre' : 'Acme'
+}
+
+QUERY & SCAN:
+------------
+
+DynamoDB offers two ways to access information stored: Query and Scan.
+
+A Query will rely on the primary-key to find information. Query can point directly to a particular item (or set ot items) and retrieve them in a fast and efficient way.
+
+Scan, as the name suggests, will browse table items from start to finish. The sort-key allows to determine the scanning order direction.
+
+UpdateItem:
+----------
+With the DynamoDB API, you use the UpdateItem action to modify a single item.
+
+{
+    TableName: "Music",
+    Key: {
+        "Artist":"No One You Know",
+        "SongTitle":"Call Me Today"
+    },
+    UpdateExpression: "SET RecordLabel = :label",
+    ExpressionAttributeValues: {
+        ":label": "Global Records"
+    }
+}
+
+With PartiQL, you use the ExecuteStatement operation to modify an item in a table, using the PartiQL Update statement.
+
+UPDATE Music
+SET RecordLabel ='Global Records'
+WHERE Artist='No One You Know' AND SongTitle='Call Me Today'
+
+DeleteItem:
+----------
+With the DynamoDB API, you use the DeleteItem action to delete data from a table, one item at a time. You must specify the item's primary key values.
+
+{
+    TableName: "Music",
+    Key: {
+        Artist: "The Acme Band",
+        SongTitle: "Look Out, World"
+    }
+}
+
+DELETE FROM Music
+WHERE Artist = 'Acme Band' AND SongTitle = 'PartiQL Rocks'
+
+DeleteTable:
+-----------
+DynamoDB has a similar action: DeleteTable. In the following example, the table is permanently deleted.
+
+{
+    TableName: "Music"
+}
+
+
+DAX:
+
+Amazon DynamoDB is designed for scale and performance. In most cases, the DynamoDB response times can be measured in single-digit milliseconds. However, there are certain use cases that require response times in microseconds. For these use cases, DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually consistent data.
+
+DAX is a DynamoDB-compatible caching service that enables you to benefit from fast in-memory performance for demanding applications. DAX addresses three core scenarios:
+
+As an in-memory cache, DAX reduces the response times of eventually consistent read workloads by an order of magnitude from single-digit milliseconds to microseconds.
+
+DAX reduces operational and application complexity by providing a managed service that is API-compatible with DynamoDB. Therefore, it requires only minimal functional changes to use with an existing application.
+
+For read-heavy or bursty workloads, DAX provides increased throughput and potential operational cost savings by reducing the need to overprovision read capacity units. This is especially beneficial for applications that require repeated reads for individual keys.
+
+DAX supports server-side encryption. With encryption at rest, the data persisted by DAX on disk will be encrypted. DAX writes data to disk as part of propagating changes from the primary node to read replicas. For more information, see DAX encryption at rest.
+
+DAX also supports encryption in transit, ensuring that all requests and responses between your application and the cluster are encrypted by transport level security (TLS), and connections to the cluster can be authenticated by verification of a cluster x509 certificate. For more information, see DAX encryption in transit.
 	
 ------------------------------------------------------------------
 DynamoDB FAQ:
