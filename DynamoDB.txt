@@ -1,4 +1,5 @@
 NOSQL Databases:
+---------------
 
 	1.non-relational databases and distributed.
 	2.does not support join.(join should be done client side)
@@ -7,8 +8,8 @@ NOSQL Databases:
 
 
 Types of NoSQL Databases:
-
-	1.Key-value:(DynamoDb) Key-value databases are highly partitionable and allow horizontal scaling at scales that other types of databases cannot achieve. Use cases such as gaming, ad tech, and IoT lend themselves particularly well to the key-value data model.
+-------------------------
+	1.Key-value:(DynamoDb) Key-value databases are highly partitionable and allow horizontal scaling at scales that other types of database`1\ cannot achieve. Use cases such as gaming, ad tech, and IoT lend themselves particularly well to the key-value data model.
 
 	2.Document:(Amazon DocumentDb) In application code, data is represented often as an object or JSON-like document because it is an efficient and intuitive data model for developers. Document databases make it easier for developers to store and query data in a database by using the same document model format that they use in their application code.
 
@@ -19,17 +20,16 @@ Types of NoSQL Databases:
 	5.Search:(Amazon OpenSearch Service) Many applications output logs to help developers troubleshoot issues. Amazon OpenSearch Service is purpose-built for providing near-real-time visualizations and analytics of machine-generated data by indexing, aggregating, and searching semistructured logs and metrics.
 	
 DynamoDB:
-
+---------
 	1.fully managed,highly available,3 AZ replication.
-	2.scales massive workloads,distributed database.
-	3.Millions of requests per seconds,100s TB of storage.
+	orage.
 	4.Fast and consistant performance.
 	5.Integrated with IAM for security,authorization and admin activity.
 
 DynamoDB is a NoSQL database and is schemaless. This means that, other than the primary key attributes, you don't have to define any attributes or data types when you create tables. By comparison, relational databases require you to define the names and data types of each column when you create a table.
 	
 Basic of DynamoDB:
-
+-----------------
 In DynamoDB, tables, items, and attributes are the core components that you work with. A table is a collection of items, and each item is a collection of attributes. DynamoDB uses primary keys to uniquely identify each item in a table and secondary indexes to provide more querying flexibility. You can use DynamoDB Streams to capture data modification events in DynamoDB tables.
 
 	1.made of tables
@@ -52,7 +52,7 @@ Document Types – A document type can represent a complex structure with nested
 Set Types – A set type can represent multiple scalar values. The set types are string set, number set, and binary set.
 		
 Primary keys:
-
+------------
 	1A.partition key(Hash):
 	2A.sort key-->attributes.
 	
@@ -61,7 +61,7 @@ Primary keys:
 	
 	
 WCU and RCU:
-
+-----------
 One read capacity unit(RCU) = one strongly consistent read per second, or two eventually consistent reads per second, for items up to 4 KB in size.
 
 Transactional read requests require two read capacity units to perform one read per second for items up to 4 KB.TransactGetItems is a synchronous read operation that groups up to 100 Get actions together. These actions can target up to 100 distinct items in one or more DynamoDB tables within the same AWS account and Region. The aggregate size of the items in the transaction can't exceed 4 MB.
@@ -74,7 +74,7 @@ Transactional read requests require two read capacity units to perform one read 
 	ProvisonedThroughputException.
 	
 WCU:(per second always):
-
+-----------------------
 	One write capacity unit(WCU) = one write per second, for items up to 1 KB in size.
 
 
@@ -140,7 +140,7 @@ WCU:(per second always):
 		6KB should be rounded upto nearest whole capacity 8KB.
 		
 DynamoDB APIs:
-
+-------------
 	1.PutItem: write date to DynamoDB.(Full replace)
 	
 	2.UpdateItem:Update data in Dyamo DB(partial update)
@@ -163,15 +163,16 @@ DynamoDB APIs:
 	10.Scan: inefficient api will scan whole table,time consuming.
 
 Amazon DynamoDB supports two types of secondary indexes:
+--------------------------------------------------------
 
 Global secondary index(GSI)—An index with a partition key and a sort key that can be different from those on the base table.
-
+---------------------------
 A global secondary index is considered "global" because queries on the index can span all of the data in the base table,
 across all partitions. A global secondary index has no size limitations and has its own provisioned throughput settings 
 for read and write activity that are separate from those of the table.
 
 Local secondary index(LSI)—An index that has the same partition key as the base table, but a different sort key.
-
+--------------------------
 A local secondary index is "local" in the sense that every partition of a local secondary index is scoped to a base table partition 
 that has the same partition key value. As a result, the total size of indexed items for any one partition key 
 value can't exceed 10 GB. Also, a local secondary index shares provisioned throughput settings for read and write activity with the table it is indexing.
@@ -208,7 +209,7 @@ You can add a global secondary index to an existing table, using the UpdateTable
 Each table in DynamoDB can have up to 20 global secondary indexes (default quota) and 5 local secondary indexes.
 
 Read consistency:
-
+----------------
 Amazon DynamoDB is available in multiple AWS Regions around the world. Each Region is independent and isolated from other AWS Regions. For example, if you have a table called People in the us-east-2 Region and another table named People in the us-west-2 Region, these are considered two entirely separate tables.
 
 CreateTable:
