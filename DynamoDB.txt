@@ -5,6 +5,7 @@ NOSQL Databases:
 	3.does not perform aggregation.
 	4.scales horizontally.
 
+
 Types of NoSQL Databases:
 
 	1.Key-value:(DynamoDb) Key-value databases are highly partitionable and allow horizontal scaling at scales that other types of databases cannot achieve. Use cases such as gaming, ad tech, and IoT lend themselves particularly well to the key-value data model.
